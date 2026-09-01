@@ -1,0 +1,1893 @@
+{
+ "savedAt": 1788293433942,
+ "meta": {
+  "mode": "nominal",
+  "version": "v1.8 — estructura 2026 validada · fichas en borrador",
+  "iso": {
+   "codigo": "GRH-RE-1",
+   "version": "C — 9/2026",
+   "vigencia": "12/2026",
+   "fum": "01/09/2026"
+  }
+ },
+ "areas": [
+  {
+   "id": "direccion",
+   "en": "Management",
+   "es": "Dirección",
+   "bg": "#FBE7DE",
+   "bgd": "#4E3A31"
+  },
+  {
+   "id": "hr",
+   "en": "Talent Management (TH)",
+   "es": "Gestión del Talento",
+   "parent": "ceo",
+   "bg": "#E2EEF8",
+   "bgd": "#274A63"
+  },
+  {
+   "id": "comercial",
+   "en": "Sales",
+   "es": "Comercial",
+   "parent": "ceo",
+   "bg": "#F0E6F7",
+   "bgd": "#453763"
+  },
+  {
+   "id": "marketing",
+   "en": "Marketing",
+   "es": "Marketing",
+   "parent": "design_manager",
+   "bg": "#E6F6E3",
+   "bgd": "#2C4A2E"
+  },
+  {
+   "id": "calidad",
+   "en": "Quality",
+   "es": "Calidad",
+   "parent": "ceo",
+   "bg": "#DEF4EF",
+   "bgd": "#1F4A44"
+  },
+  {
+   "id": "admin",
+   "en": "General Administration",
+   "es": "Administración General",
+   "parent": "ceo",
+   "bg": "#FEF1E2",
+   "bgd": "#4E3D1F"
+  },
+  {
+   "id": "idi",
+   "en": "R&D+I",
+   "es": "I+D+I",
+   "parent": "ceo",
+   "bg": "#E9FCF2",
+   "bgd": "#1F573E"
+  },
+  {
+   "id": "proyectos",
+   "en": "Project Management",
+   "es": "Gestión de Proyectos",
+   "parent": "coo",
+   "bg": "#E0F2F7",
+   "bgd": "#1F4653"
+  },
+  {
+   "id": "diseno",
+   "en": "Design (UX/UI)",
+   "es": "Diseño UX/UI",
+   "parent": "coo",
+   "bg": "#EBE9FA",
+   "bgd": "#3B3760"
+  },
+  {
+   "id": "desarrollo",
+   "en": "Development",
+   "es": "Desarrollo",
+   "parent": "cto",
+   "bg": "#FAF3D9",
+   "bgd": "#4A431F"
+  },
+  {
+   "id": "infra",
+   "en": "Infrastructure",
+   "es": "Infraestructura",
+   "parent": "cto",
+   "bg": "#FBE5E7",
+   "bgd": "#4E3037"
+  }
+ ],
+ "roles": [
+  {
+   "id": "ceo",
+   "area": "direccion",
+   "en": "CEO (Chief Executive Officer)",
+   "es": "Director/a General",
+   "parent": "direccion",
+   "reporta": "Directorio (Enzo Varela, Estefanía Alloco y Julián Racca)",
+   "supervisa": "CTO, COO, Gestión del Talento, Comercial, Calidad, Administración e I+D+I",
+   "mision": "Definir la visión, la estrategia y la cultura de GoodApps, asegurar la sostenibilidad del negocio y liderar al equipo directivo.",
+   "resp": [
+    "Definir y comunicar la estrategia de negocio, los objetivos anuales y las prioridades de inversión.",
+    "Liderar al equipo directivo (CTO, COO, responsables de área) y asegurar su alineación.",
+    "Representar a la empresa ante clientes clave, socios, instituciones y el ecosistema (p. ej., Instituto Superior, gobierno, cámaras).",
+    "Aprobar presupuesto, estructura organizacional, contrataciones críticas y política salarial.",
+    "Ser guardián de la cultura, los valores y el estándar de calidad (ISO 9001).",
+    "Impulsar nuevas unidades de negocio y productos.",
+    "Asegurar el cumplimiento legal, fiscal y laboral con apoyo de Administración y asesores externos."
+   ],
+   "req": {
+    "form": "Formación universitaria en sistemas, ingeniería o administración; posgrado en dirección de empresas deseable.",
+    "exp": "10+ años en tecnología, de los cuales 5+ liderando equipos y negocio.",
+    "tec": [
+     "Estrategia y finanzas de una empresa de servicios de software",
+     "Ventas consultivas B2B",
+     "Gestión de personas y cultura",
+     "Mercado tecnológico argentino e internacional"
+    ]
+   },
+   "comp": [
+    "Visión estratégica",
+    "Liderazgo e influencia",
+    "Toma de decisiones",
+    "Comunicación",
+    "Integridad"
+   ],
+   "kpi": [
+    "Facturación y margen anual",
+    "Retención de clientes clave",
+    "Rotación voluntaria y eNPS del equipo",
+    "Cumplimiento del plan anual"
+   ],
+   "carrera": "Rol de cúspide. Desarrollo hacia un directorio con socios/directores independientes.",
+   "nota": "Enzo Varela, socio fundador (GoodApps fundada en 2004; razón social GOODAPPS SAS). Ejerce además el rol de Sales Manager. Estructura validada sep-2026.",
+   "estado": "borrador"
+  },
+  {
+   "id": "cto",
+   "area": "direccion",
+   "en": "CTO (Chief Technology Officer)",
+   "es": "Director/a de Tecnología",
+   "parent": "ceo",
+   "reporta": "CEO",
+   "supervisa": "Team Leads de Desarrollo e Infraestructura",
+   "mision": "Definir la estrategia tecnológica, los estándares de arquitectura y calidad técnica, y garantizar que el equipo técnico entregue soluciones robustas y escalables.",
+   "resp": [
+    "Definir el stack tecnológico, la arquitectura de referencia y los estándares de código y seguridad.",
+    "Evaluar la viabilidad técnica de propuestas comerciales y estimar esfuerzos junto a Project Management.",
+    "Impulsar la mejora continua técnica: DevOps, testing, documentación, deuda técnica.",
+    "Liderar la incorporación de IA en productos y servicios (junto a I+D).",
+    "Desarrollar técnicamente a los líderes (Team Leads, Dev Manager) y definir el career path técnico.",
+    "Ser referente técnico ante clientes estratégicos.",
+    "Supervisar Desarrollo (a través de los Team Leads) e Infraestructura; asegurar capacidad y planificación técnica."
+   ],
+   "req": {
+    "form": "Título universitario o técnico superior en sistemas/desarrollo de software.",
+    "exp": "8+ años en desarrollo, 3+ liderando equipos técnicos.",
+    "tec": [
+     "Arquitectura de software y cloud",
+     "Metodologías ágiles",
+     "Seguridad de la información",
+     "IA aplicada / LLMs",
+     "Gestión de equipos técnicos"
+    ]
+   },
+   "comp": [
+    "Pensamiento sistémico",
+    "Liderazgo técnico",
+    "Orientación a la calidad",
+    "Aprendizaje continuo",
+    "Comunicación con no técnicos"
+   ],
+   "kpi": [
+    "Cumplimiento de plazos y calidad de entregas",
+    "Incidentes en producción",
+    "Disponibilidad de infraestructura",
+    "Retención de talento técnico"
+   ],
+   "carrera": "Rol de cúspide técnica; puede evolucionar a VP Engineering / CTO con foco en producto.",
+   "nota": "Julián Racca, socio/director en relación de dependencia; integra el Directorio junto a Enzo y Estefanía. Desde sep-2026 no figura como IT Manager, I+D Manager ni Senior Developer: I+D+I pasa a área propia y la infraestructura la lleva un externo que le reporta.",
+   "estado": "borrador"
+  },
+  {
+   "id": "coo",
+   "area": "direccion",
+   "en": "COO (Chief Operating Officer)",
+   "es": "Director/a de Operaciones",
+   "parent": "ceo",
+   "reporta": "CEO",
+   "supervisa": "Gestión de Proyectos, Diseño UX/UI (incluye Marketing); coordina operativamente con Gestión del Talento",
+   "mision": "Garantizar que los proyectos y servicios se entreguen en tiempo, calidad y rentabilidad, coordinando las áreas operativas y los procesos del sistema de gestión.",
+   "resp": [
+    "Coordinar la operación diaria: planificación de proyectos, asignación de recursos, seguimiento de entregas.",
+    "Supervisar Project Management y Diseño (y otras áreas operativas según se defina).",
+    "Asegurar el funcionamiento de los procesos ISO 9001 y su mejora continua junto a Calidad.",
+    "Gestionar la relación operativa con clientes: alcance, cambios, satisfacción, escalamientos.",
+    "Medir capacidad, utilización y rentabilidad por proyecto.",
+    "Estandarizar herramientas y rituales de trabajo (planificación, seguimiento, retrospectivas).",
+    "Reemplazar al CEO en la conducción operativa cuando corresponda."
+   ],
+   "req": {
+    "form": "Formación universitaria o técnica; formación en gestión de proyectos o de operaciones deseable.",
+    "exp": "6+ años en operaciones o gestión de proyectos de software, 3+ liderando equipos.",
+    "tec": [
+     "Gestión de proyectos (ágil y tradicional)",
+     "Procesos y mejora continua (ISO 9001)",
+     "Métricas operativas",
+     "Gestión de clientes"
+    ]
+   },
+   "comp": [
+    "Organización y planificación",
+    "Resolución de problemas",
+    "Liderazgo",
+    "Orientación al cliente",
+    "Comunicación"
+   ],
+   "kpi": [
+    "% de proyectos en plazo y presupuesto",
+    "Satisfacción de clientes",
+    "Utilización del equipo",
+    "No conformidades ISO cerradas"
+   ],
+   "carrera": "Rol de cúspide operativa.",
+   "nota": "Estefanía Alloco, socia/directora en relación de dependencia; integra el Directorio junto a Enzo y Julián. Es además Design Manager y Team Lead de UX/UI.",
+   "estado": "borrador"
+  },
+  {
+   "id": "hr_manager",
+   "area": "hr",
+   "en": "TH · Talent & Human Manager",
+   "es": "Gerente de Gestión del Talento",
+   "parent": "hr",
+   "reporta": "CEO (coordina operativamente con la COO)",
+   "supervisa": "Coordinación funcional con la TH Assistant (administración de personal), que depende jerárquicamente de Administración",
+   "mision": "Diseñar, implementar y evolucionar la gestión del talento de GoodApps —la 'parte blanda' de las personas—: estructura, selección, onboarding, desempeño, desarrollo, compensaciones, clima y cultura.",
+   "resp": [
+    "Definir la estrategia y el plan anual de Gestión del Talento alineado al negocio, acordado con CEO y COO.",
+    "Diseñar y mantener organigrama, descripciones de puesto, niveles y rutas de carrera.",
+    "Liderar selección, onboarding y offboarding; asegurar una experiencia de empleado consistente.",
+    "Implementar el sistema de gestión del desempeño y feedback.",
+    "Proponer política de compensaciones y beneficios; analizar mercado.",
+    "Medir clima, engagement y rotación; proponer acciones.",
+    "Asesorar a líderes en gestión de equipos, conflictos y desarrollo.",
+    "Coordinar con la TH Assistant la administración de personal (altas, bajas, sueldos, legajos) y con Administración el cumplimiento laboral."
+   ],
+   "req": {
+    "form": "Licenciatura en RR. HH., Psicología, Relaciones Laborales, Administración o afín.",
+    "exp": "5+ años en gestión de personas, idealmente en empresas de tecnología o servicios profesionales.",
+    "tec": [
+     "Legislación laboral argentina",
+     "Selección y evaluación por competencias",
+     "Gestión del desempeño",
+     "Compensaciones",
+     "People analytics básico",
+     "Herramientas HRIS/ATS"
+    ]
+   },
+   "comp": [
+    "Empatía y escucha",
+    "Criterio y confidencialidad",
+    "Orientación a resultados",
+    "Influencia sin autoridad formal",
+    "Pensamiento estratégico"
+   ],
+   "kpi": [
+    "Time to hire",
+    "Rotación voluntaria",
+    "eNPS / clima",
+    "% de evaluaciones de desempeño completadas",
+    "Cumplimiento del plan anual"
+   ],
+   "carrera": "Hacia Dirección de Personas a medida que la empresa crece.",
+   "nota": "Puesto creado en sep-2026 para Lic. Lorena Garrido (ingreso 07/09/2026, relación de dependencia, modalidad híbrida Villa del Rosario / Córdoba Capital). Reporta al CEO y coordina operativamente con la COO. Antes de su ingreso, la función la cubría Laura Rojas desde Administración sin la profesionalización de la parte blanda.",
+   "estado": "borrador"
+  },
+  {
+   "id": "hr_assistant",
+   "area": "hr",
+   "en": "TH Assistant · Personnel Administration",
+   "es": "Asistente de Gestión del Talento · Administración de Personal",
+   "parent": "hr_manager",
+   "reporta": "Administration Lead / CEO (jerárquico) · TH Manager (coordinación funcional)",
+   "supervisa": "—",
+   "mision": "Ejecutar la 'parte dura' de la gestión de personas: sueldos, altas y bajas, novedades, legajos y licencias, articulando con el estudio contable y con Administración.",
+   "resp": [
+    "Gestionar altas, bajas y modificaciones ante organismos (AFIP/ARCA, obra social, ART, sindicato si aplica).",
+    "Preparar y controlar las novedades para la liquidación de sueldos con el estudio contable; distribuir recibos.",
+    "Mantener legajos y la base de datos de personal completa y actualizada.",
+    "Registrar vacaciones, licencias, ausencias y horas.",
+    "Dar soporte administrativo a los procesos de selección, onboarding y capacitación que lidera la TH Manager.",
+    "Dar primera respuesta a consultas administrativas de colaboradores."
+   ],
+   "req": {
+    "form": "Formación en administración, RR. HH. o afín.",
+    "exp": "3+ años en administración de personal.",
+    "tec": [
+     "Liquidación de sueldos y cargas sociales (control)",
+     "Legislación laboral y convenios",
+     "Planillas y sistemas de gestión",
+     "Trámites ante organismos"
+    ]
+   },
+   "comp": [
+    "Prolijidad",
+    "Discreción",
+    "Servicio",
+    "Organización"
+   ],
+   "kpi": [
+    "Exactitud y puntualidad de novedades y liquidaciones",
+    "Legajos completos",
+    "Tiempo de respuesta a consultas"
+   ],
+   "carrera": "Hacia Analista de Administración de Personal / Payroll.",
+   "nota": "Ocupado por Laura Rojas, que además es Responsable de Administración (su línea jerárquica, que depende del CEO) y Quality Manager. Con la TH Manager la relación es de coordinación funcional: no la evalúa ni le asigna objetivos. Antes de sep-2026 cubría toda la función de RR. HH.",
+   "estado": "borrador"
+  },
+  {
+   "id": "sales_manager",
+   "area": "comercial",
+   "en": "Sales Manager",
+   "es": "Director/a Comercial",
+   "parent": "comercial",
+   "reporta": "CEO (lo ejerce el propio CEO)",
+   "supervisa": "Commercial Manager",
+   "mision": "Definir la estrategia comercial, la oferta y las metas de ingresos de GoodApps, y supervisar a la Gerencia Comercial.",
+   "resp": [
+    "Definir objetivos comerciales anuales, segmentos, oferta y pricing.",
+    "Aprobar propuestas y negociaciones estratégicas; participar en cuentas clave.",
+    "Supervisar el forecast y el pipeline que gestiona la Gerencia Comercial.",
+    "Definir alianzas, canales y prioridades de inversión comercial.",
+    "Alinear Comercial con Tecnología, Proyectos y Diseño."
+   ],
+   "req": {
+    "form": "Formación universitaria en administración, marketing, sistemas o afín.",
+    "exp": "5+ años en venta consultiva de servicios tecnológicos B2B.",
+    "tec": [
+     "Venta consultiva",
+     "Forecast y pipeline",
+     "Pricing de servicios de software",
+     "Negociación"
+    ]
+   },
+   "comp": [
+    "Visión de negocio",
+    "Negociación",
+    "Comunicación persuasiva",
+    "Decisión"
+   ],
+   "kpi": [
+    "Ingresos vs. objetivo",
+    "Margen por línea de negocio",
+    "Nuevos clientes por trimestre"
+   ],
+   "carrera": "Rol de cúspide comercial; a futuro, un Director/a Comercial dedicado.",
+   "nota": "Lo ejerce el CEO (Enzo Varela). Confirmado sep-2026.",
+   "estado": "borrador"
+  },
+  {
+   "id": "sales_gm",
+   "area": "comercial",
+   "en": "Commercial Manager",
+   "es": "Gerente Comercial",
+   "parent": "sales_manager",
+   "reporta": "Sales Manager (CEO)",
+   "supervisa": "Account Executives y Consultor de Relaciones Institucionales",
+   "mision": "Conducir la operación comercial diaria: pipeline, propuestas, cierre y seguimiento de cuentas, liderando al equipo de ejecutivos de cuentas.",
+   "resp": [
+    "Gestionar el pipeline y el forecast de ventas (CRM) y reportarlo al Sales Manager.",
+    "Coordinar prospección, calificación de oportunidades y agenda de reuniones (incluido el trabajo del ejecutivo externo).",
+    "Elaborar propuestas y presupuestos con Tecnología, Proyectos y Diseño.",
+    "Cerrar negociaciones dentro de la política de precios aprobada.",
+    "Fijar prioridades de marketing (campañas, contenidos, leads) junto a Diseño.",
+    "Entrenar y dar seguimiento a los Account Executives."
+   ],
+   "req": {
+    "form": "Formación universitaria en administración, comercialización o afín.",
+    "exp": "4+ años en ventas B2B de tecnología, 1+ liderando equipo.",
+    "tec": [
+     "CRM y forecast",
+     "Elaboración de propuestas",
+     "Negociación",
+     "Nociones de software a medida y productos digitales"
+    ]
+   },
+   "comp": [
+    "Orientación a resultados",
+    "Liderazgo",
+    "Organización",
+    "Resiliencia"
+   ],
+   "kpi": [
+    "Ventas cerradas vs. objetivo",
+    "Tasa de conversión",
+    "Ciclo de venta",
+    "Reuniones calificadas por mes"
+   ],
+   "carrera": "Hacia Director/a Comercial.",
+   "nota": "Puesto agregado en sep-2026. Leonardo López Monfrinotti (LÍDER, relación de dependencia, híbrido/remoto).",
+   "estado": "borrador"
+  },
+  {
+   "id": "account_exec",
+   "area": "comercial",
+   "en": "Account Executive",
+   "es": "Ejecutivo/a de Cuentas",
+   "parent": "sales_gm",
+   "reporta": "Commercial Manager",
+   "supervisa": "—",
+   "mision": "Desarrollar y cuidar la cartera de clientes: prospectar, presentar soluciones, cerrar ventas y asegurar la satisfacción y el crecimiento de cada cuenta.",
+   "resp": [
+    "Prospectar y calificar oportunidades en los segmentos definidos; generar reuniones con clientes.",
+    "Relevar necesidades y presentar propuestas junto a Tecnología/Diseño.",
+    "Negociar y cerrar contratos; mantener el CRM actualizado.",
+    "Gestionar la relación post-venta y detectar oportunidades de upselling.",
+    "Reportar avance del pipeline a la Gerencia Comercial."
+   ],
+   "req": {
+    "form": "Formación terciaria/universitaria en comercialización, administración o afín.",
+    "exp": "2+ años en ventas B2B, deseable en tecnología.",
+    "tec": [
+     "CRM",
+     "Presentaciones comerciales",
+     "Nociones de software a medida y productos digitales"
+    ]
+   },
+   "comp": [
+    "Comunicación",
+    "Escucha activa",
+    "Orientación al cliente",
+    "Autonomía"
+   ],
+   "kpi": [
+    "Ventas cerradas",
+    "Reuniones calificadas por mes",
+    "Satisfacción y retención de cuentas"
+   ],
+   "carrera": "Hacia Commercial Manager / Key Account Manager.",
+   "nota": "Sep-2026: Enzo Robledo (semi senior, presencial) y Leonardo Aratano (externo, también analista funcional / PO). Diseño (UX/UI) provee las piezas gráficas comerciales como servicio interno.",
+   "estado": "borrador"
+  },
+  {
+   "id": "inst_consultant",
+   "area": "comercial",
+   "en": "Institutional Relations Consultant",
+   "es": "Consultor/a de Relaciones Institucionales",
+   "parent": "sales_gm",
+   "reporta": "Commercial Manager",
+   "supervisa": "—",
+   "mision": "Abrir puertas: generar reuniones con clientes, instituciones y decisores para proyectos de gran envergadura, y sostener la red de relaciones institucionales de GoodApps.",
+   "resp": [
+    "Identificar y contactar decisores en empresas, gobiernos e instituciones.",
+    "Generar y coordinar reuniones de alto nivel para el equipo comercial.",
+    "Representar a GoodApps en eventos, cámaras y espacios institucionales.",
+    "Detectar licitaciones y proyectos grandes y traerlos a la Gerencia Comercial.",
+    "Mantener actualizada la red de contactos institucionales en el CRM."
+   ],
+   "req": {
+    "form": "Formación universitaria; trayectoria en el ecosistema empresarial/institucional de Córdoba.",
+    "exp": "10+ años de relaciones institucionales, comerciales o públicas.",
+    "tec": [
+     "Networking institucional",
+     "Venta consultiva de alto nivel",
+     "Licitaciones y compras públicas",
+     "Comunicación ejecutiva"
+    ]
+   },
+   "comp": [
+    "Credibilidad",
+    "Comunicación",
+    "Persistencia",
+    "Criterio político"
+   ],
+   "kpi": [
+    "Reuniones calificadas generadas",
+    "Proyectos grandes ingresados al pipeline",
+    "Alianzas institucionales activas"
+   ],
+   "carrera": "Rol externo de asesoría; sin ruta interna.",
+   "nota": "Marcos Carle, externo. Título definido por el CEO en sep-2026.",
+   "estado": "borrador"
+  },
+  {
+   "id": "mkt_manager",
+   "area": "marketing",
+   "en": "Marketing Manager",
+   "es": "Responsable de Marketing",
+   "parent": "marketing",
+   "reporta": "Design Manager (COO)",
+   "supervisa": "Marketing & Content Analyst",
+   "mision": "Posicionar la marca GoodApps y sus productos, generar demanda calificada y sostener la marca empleadora.",
+   "resp": [
+    "Definir el plan de marketing anual (posicionamiento, canales, presupuesto).",
+    "Generar leads para Comercial: campañas, contenido, eventos, SEO/SEM.",
+    "Gestionar la identidad de marca y los sitios web.",
+    "Producir contenido de marca empleadora junto a Gestión del Talento.",
+    "Medir resultados (tráfico, leads, costo por lead) y optimizar."
+   ],
+   "req": {
+    "form": "Licenciatura en marketing, comunicación o afín.",
+    "exp": "3-5 años en marketing digital B2B.",
+    "tec": [
+     "Marketing digital y automatización",
+     "Analítica web",
+     "Redes sociales",
+     "Gestión de contenidos",
+     "Nociones de diseño"
+    ]
+   },
+   "comp": [
+    "Creatividad",
+    "Análisis",
+    "Planificación",
+    "Colaboración"
+   ],
+   "kpi": [
+    "Leads calificados por mes",
+    "Costo por lead",
+    "Crecimiento de audiencia",
+    "Alcance de contenido de marca empleadora"
+   ],
+   "carrera": "Hacia Head of Marketing / Growth.",
+   "nota": "Vacante. Marketing depende de Diseño (Estefanía); la Gerencia Comercial fija prioridades a través de ella.",
+   "estado": "borrador"
+  },
+  {
+   "id": "content_manager",
+   "area": "marketing",
+   "en": "Marketing & Content Analyst (Jr)",
+   "es": "Analista Junior de Marketing y Contenidos",
+   "parent": "marketing",
+   "reporta": "Design Manager (Estefanía)",
+   "supervisa": "—",
+   "mision": "Ejecutar el marketing digital de GoodApps: redes, web y blog, con contenido que comunique la propuesta de valor y apoye a Comercial.",
+   "resp": [
+    "Planificar y ejecutar el calendario de contenidos (redes, blog, newsletter).",
+    "Redactar y publicar piezas: posts, artículos, casos de éxito, materiales de venta.",
+    "Mantener actualizado el sitio web y sus contenidos.",
+    "Coordinar con Diseño las piezas gráficas y audiovisuales.",
+    "Medir engagement y tráfico y proponer ajustes."
+   ],
+   "req": {
+    "form": "Formación en comunicación, marketing o afín (en curso o graduada).",
+    "exp": "0-2 años en producción de contenidos digitales.",
+    "tec": [
+     "Redacción y storytelling",
+     "Redes sociales",
+     "Herramientas de programación de contenido",
+     "Nociones de SEO y web"
+    ]
+   },
+   "comp": [
+    "Creatividad",
+    "Prolijidad",
+    "Autonomía",
+    "Curiosidad"
+   ],
+   "kpi": [
+    "Publicaciones por mes",
+    "Engagement",
+    "Tráfico y leads generados"
+   ],
+   "carrera": "Hacia Marketing Analyst Semi Senior / Marketing Manager.",
+   "nota": "Ludmila Cuassolo (junior, externa remota). Reporta a Estefanía; Comercial le fija prioridades a través de ella.",
+   "estado": "borrador"
+  },
+  {
+   "id": "quality_manager",
+   "area": "calidad",
+   "en": "Quality and Certification Manager",
+   "es": "Responsable de Calidad y Certificaciones",
+   "parent": "calidad",
+   "reporta": "COO (a validar)",
+   "supervisa": "—",
+   "mision": "Mantener y mejorar el sistema de gestión de calidad ISO 9001:2015, asegurar su cumplimiento y coordinar auditorías y certificaciones.",
+   "resp": [
+    "Administrar el sistema documental (procedimientos, registros, versiones).",
+    "Planificar y ejecutar auditorías internas; coordinar auditorías externas (TÜV Rheinland).",
+    "Gestionar no conformidades, acciones correctivas y mejora continua.",
+    "Medir indicadores de proceso y satisfacción de clientes.",
+    "Capacitar al equipo en el sistema de gestión."
+   ],
+   "req": {
+    "form": "Formación terciaria/universitaria; formación en ISO 9001 y auditoría interna.",
+    "exp": "2+ años en sistemas de gestión de calidad.",
+    "tec": [
+     "ISO 9001:2015",
+     "Gestión documental",
+     "Auditoría interna",
+     "Análisis de indicadores"
+    ]
+   },
+   "comp": [
+    "Rigor",
+    "Organización",
+    "Comunicación",
+    "Orientación a la mejora"
+   ],
+   "kpi": [
+    "Resultado de auditorías",
+    "No conformidades abiertas/cerradas",
+    "Cumplimiento de revisiones documentales"
+   ],
+   "carrera": "Hacia responsable de Procesos y Mejora Continua.",
+   "nota": "Laura Rojas, única responsable (junto con Administración y TH Assistant). Sin auditores internos adicionales. Confirmado sep-2026.",
+   "estado": "borrador"
+  },
+  {
+   "id": "admin_manager",
+   "area": "admin",
+   "en": "Administration Lead",
+   "es": "Responsable de Administración",
+   "parent": "admin",
+   "reporta": "CEO",
+   "supervisa": "Maintenance and Cleaning Assistant",
+   "mision": "Asegurar la gestión administrativa, contable y financiera de la empresa: facturación, cobranzas, pagos, coordinación de la liquidación de sueldos e impuestos con el estudio contable y cumplimiento fiscal y laboral.",
+   "resp": [
+    "Gestionar facturación, cobranzas, pagos a proveedores y flujo de caja.",
+    "Coordinar con el estudio contable externo la contabilidad, los impuestos y la liquidación de sueldos.",
+    "Administrar contratos, seguros, ART y documentación legal de la empresa.",
+    "Administrar altas, bajas y novedades de personal ante organismos (en su rol de TH Assistant).",
+    "Elaborar reportes financieros para Dirección.",
+    "Gestionar compras, servicios de oficina y mantenimiento (supervisa a la asistente de mantenimiento y limpieza)."
+   ],
+   "req": {
+    "form": "Contador/a, Lic. en Administración o afín.",
+    "exp": "4+ años en administración de PyMEs.",
+    "tec": [
+     "Contabilidad y finanzas",
+     "Régimen fiscal y laboral argentino",
+     "Sistemas de gestión administrativa",
+     "Planillas avanzadas"
+    ]
+   },
+   "comp": [
+    "Rigor y precisión",
+    "Confidencialidad",
+    "Organización",
+    "Proactividad"
+   ],
+   "kpi": [
+    "Días de cobranza",
+    "Cumplimiento de vencimientos",
+    "Exactitud de liquidaciones",
+    "Reportes a tiempo"
+   ],
+   "carrera": "Hacia Gerencia de Administración y Finanzas cuando el volumen lo justifique.",
+   "nota": "Única persona del área (Laura Rojas); no es una gerencia. El estudio contable externo lleva sueldos e impuestos. Agustín Massucco (contador, analista funcional en Gestión de Proyectos) colabora con Administración ante dudas y consultas internas. Confirmado sep-2026.",
+   "estado": "borrador"
+  },
+  {
+   "id": "maint_assistant",
+   "area": "admin",
+   "en": "Maintenance and Cleaning Assistant",
+   "es": "Asistente de Mantenimiento y Limpieza",
+   "parent": "admin",
+   "reporta": "Administration Manager",
+   "supervisa": "—",
+   "mision": "Mantener la oficina limpia, ordenada y en condiciones para el trabajo del equipo.",
+   "resp": [
+    "Realizar la limpieza diaria de oficinas, baños y áreas comunes.",
+    "Controlar y reponer insumos de limpieza y cocina.",
+    "Detectar necesidades de mantenimiento y reportarlas.",
+    "Colaborar en la preparación de espacios para reuniones y eventos."
+   ],
+   "req": {
+    "form": "Secundario.",
+    "exp": "Experiencia previa en limpieza de oficinas deseable.",
+    "tec": [
+     "Uso seguro de productos de limpieza",
+     "Nociones de mantenimiento básico"
+    ]
+   },
+   "comp": [
+    "Responsabilidad",
+    "Autonomía",
+    "Prolijidad"
+   ],
+   "kpi": [
+    "Cumplimiento del plan de limpieza",
+    "Insumos disponibles"
+   ],
+   "carrera": "—",
+   "nota": "Carina Ludueña, externa. Confirmado sep-2026.",
+   "estado": "borrador"
+  },
+  {
+   "id": "idi_lead",
+   "area": "idi",
+   "en": "R&D+I Technical Lead",
+   "es": "Líder Técnico de I+D+I",
+   "parent": "idi",
+   "reporta": "CEO",
+   "supervisa": "AI Developers",
+   "mision": "Liderar la investigación, el desarrollo y la innovación de GoodApps —especialmente en inteligencia artificial— convirtiendo prototipos en soluciones vendibles y transfiriendo conocimiento al resto de la empresa.",
+   "resp": [
+    "Definir la agenda de I+D+I alineada a la estrategia (agentes de IA, automatización, nuevos productos).",
+    "Liderar técnicamente al equipo de AI Developers: diseño, revisión de código, estándares y mentoría.",
+    "Ejecutar pruebas de concepto y prototipos; evaluar viabilidad, costo y riesgo.",
+    "Transferir componentes reutilizables y buenas prácticas a Desarrollo.",
+    "Vincularse con universidades, programas de innovación y proveedores tecnológicos.",
+    "Documentar hallazgos, estándares de uso de IA y resultados."
+   ],
+   "req": {
+    "form": "Título o tecnicatura en sistemas; especialización en IA deseable.",
+    "exp": "5+ años en desarrollo, 2+ en proyectos de IA o innovación; experiencia liderando.",
+    "tec": [
+     "LLMs, agentes, RAG, APIs de IA",
+     "Python / JavaScript",
+     "Arquitectura de software",
+     "Gestión de proyectos de innovación"
+    ]
+   },
+   "comp": [
+    "Curiosidad",
+    "Pensamiento crítico",
+    "Liderazgo técnico",
+    "Capacidad de enseñar"
+   ],
+   "kpi": [
+    "Prototipos convertidos en producto/servicio",
+    "Calidad y costo de los agentes en producción",
+    "Adopción interna de componentes",
+    "Crecimiento del equipo"
+   ],
+   "carrera": "Hacia Head of AI / Dirección de Innovación.",
+   "nota": "Emmanuel Bría (Senior III, relación de dependencia, presencial). Área propia desde sep-2026, reporta al CEO.",
+   "estado": "borrador"
+  },
+  {
+   "id": "ai_dev",
+   "area": "idi",
+   "en": "AI Developer",
+   "es": "Desarrollador/a de IA",
+   "parent": "idi_lead",
+   "reporta": "R&D+I Technical Lead",
+   "supervisa": "—",
+   "mision": "Diseñar y construir soluciones basadas en IA (agentes, asistentes, automatizaciones) para clientes y productos de GoodApps.",
+   "resp": [
+    "Desarrollar integraciones con modelos de lenguaje y servicios de IA.",
+    "Diseñar flujos de agentes, prompts, evaluaciones y guardrails.",
+    "Integrar soluciones de IA con sistemas del cliente (APIs, bases de datos, WhatsApp, etc.).",
+    "Medir calidad, costo y desempeño de los modelos en producción.",
+    "Documentar y compartir buenas prácticas."
+   ],
+   "req": {
+    "form": "Tecnicatura o título en sistemas.",
+    "exp": "2+ años en desarrollo, experiencia comprobable con IA generativa.",
+    "tec": [
+     "Python / JavaScript",
+     "APIs de LLMs, embeddings, RAG",
+     "Integraciones y webhooks",
+     "Cloud básico"
+    ]
+   },
+   "comp": [
+    "Aprendizaje continuo",
+    "Rigor experimental",
+    "Autonomía",
+    "Colaboración"
+   ],
+   "kpi": [
+    "Soluciones en producción",
+    "Precisión/calidad medida de los agentes",
+    "Costo por interacción"
+   ],
+   "carrera": "Hacia AI Engineer Senior / I+D Manager.",
+   "nota": "Sep-2026: Alexandro Fernández, Aníbal Contreras y Facundo Rodríguez (los tres junior, externos remotos).",
+   "estado": "borrador"
+  },
+  {
+   "id": "pm",
+   "area": "proyectos",
+   "en": "Project Manager",
+   "es": "Gerente de Proyectos",
+   "parent": "proyectos",
+   "reporta": "COO",
+   "supervisa": "Coordina equipos de proyecto (sin reportes jerárquicos)",
+   "mision": "Planificar, coordinar y controlar proyectos de software para entregarlos en alcance, plazo, costo y calidad, siendo el nexo con el cliente.",
+   "resp": [
+    "Definir alcance, plan, hitos y presupuesto de cada proyecto.",
+    "Coordinar al equipo (desarrollo, diseño, testing) y gestionar riesgos e impedimentos.",
+    "Facilitar ceremonias ágiles (planificación, seguimiento, retrospectivas).",
+    "Gestionar la comunicación y las expectativas del cliente; controlar cambios de alcance.",
+    "Reportar estado, desvíos y rentabilidad a la COO.",
+    "Asegurar la documentación del proyecto según el sistema de gestión."
+   ],
+   "req": {
+    "form": "Formación universitaria/terciaria en sistemas o afín; certificación en gestión de proyectos (PMP/Scrum) deseable.",
+    "exp": "3+ años gestionando proyectos de software.",
+    "tec": [
+     "Scrum/Kanban y planificación tradicional",
+     "Herramientas de gestión (Jira, Trello, etc.)",
+     "Estimación y presupuestación",
+     "Gestión de clientes"
+    ]
+   },
+   "comp": [
+    "Organización",
+    "Liderazgo",
+    "Comunicación",
+    "Negociación",
+    "Manejo de la presión"
+   ],
+   "kpi": [
+    "Proyectos en plazo y presupuesto",
+    "Satisfacción del cliente",
+    "Desvíos de alcance controlados"
+   ],
+   "carrera": "Hacia Head of Delivery / COO.",
+   "nota": "Sep-2026: Romina Giaveno (senior, referente del área), Agustín Massucco (senior, contador) y Marina Vincenti (semi senior, externa). El área depende de la COO.",
+   "estado": "borrador"
+  },
+  {
+   "id": "po",
+   "area": "proyectos",
+   "en": "Product Owner / Functional Analyst",
+   "es": "Product Owner · Analista Funcional",
+   "parent": "pm",
+   "reporta": "Project Manager del proyecto · COO",
+   "supervisa": "—",
+   "mision": "Representar al cliente dentro del equipo: relevar y traducir necesidades en requerimientos priorizados, y validar que lo entregado resuelva el problema.",
+   "resp": [
+    "Relevar y documentar necesidades del cliente en historias de usuario y criterios de aceptación.",
+    "Priorizar el backlog según valor, riesgo y dependencias.",
+    "Validar entregas y aceptar funcionalidades.",
+    "Mantener la visión funcional de cada solución a medida.",
+    "Ser el punto de contacto funcional entre cliente y equipo."
+   ],
+   "req": {
+    "form": "Formación en sistemas, diseño o negocio.",
+    "exp": "2+ años como PO, analista funcional o similar.",
+    "tec": [
+     "Análisis funcional",
+     "Backlog management",
+     "UX básico",
+     "Herramientas ágiles"
+    ]
+   },
+   "comp": [
+    "Criterio de priorización",
+    "Comunicación",
+    "Empatía con el usuario",
+    "Decisión"
+   ],
+   "kpi": [
+    "Valor entregado por sprint",
+    "Retrabajo por requerimientos mal definidos",
+    "Satisfacción del cliente"
+   ],
+   "carrera": "Hacia Project Manager / Product Manager.",
+   "nota": "GoodApps es una empresa de servicios y software a medida: el rol se ejerce por proyecto. Sep-2026: Leonardo Aratano, Agustín Massucco, Lucas Campos (semi senior), Gabriel Perrotti y Stefano Dettori (junior, externo).",
+   "estado": "borrador"
+  },
+  {
+   "id": "team_lead",
+   "area": "desarrollo",
+   "en": "Team Lead",
+   "es": "Líder Técnico de Equipo",
+   "parent": "desarrollo",
+   "reporta": "CTO",
+   "supervisa": "Desarrolladores Backend, Frontend y Full Stack, Analistas QA y Soporte de su equipo (equipos armados por proyecto/cliente)",
+   "mision": "Guiar técnicamente a un equipo de desarrollo, asegurar la calidad de lo que se construye y acompañar el crecimiento de sus integrantes.",
+   "resp": [
+    "Distribuir tareas y dar seguimiento diario al equipo.",
+    "Revisar código, resolver bloqueos técnicos y velar por los estándares.",
+    "Participar en el diseño técnico y las estimaciones.",
+    "Dar feedback continuo y participar en las evaluaciones de desempeño.",
+    "Ser el nexo técnico con PM/PO y el cliente cuando corresponda."
+   ],
+   "req": {
+    "form": "Tecnicatura o título en sistemas.",
+    "exp": "4+ años en desarrollo; experiencia liderando o mentoreando.",
+    "tec": [
+     "Stack de GoodApps",
+     "Revisión de código",
+     "Diseño técnico",
+     "Herramientas ágiles"
+    ]
+   },
+   "comp": [
+    "Liderazgo cercano",
+    "Comunicación",
+    "Mentoría",
+    "Responsabilidad"
+   ],
+   "kpi": [
+    "Entregas del equipo en plazo",
+    "Calidad (bugs por entrega)",
+    "Crecimiento de los miembros"
+   ],
+   "carrera": "Hacia Development Manager / Arquitecto.",
+   "nota": "Sep-2026: Gabriel Perrotti (Senior II), Mauricio Hongn (Senior II) y Santiago Bruno (Senior II). Los equipos se arman por proyecto o cliente; el puesto Development Manager se eliminó y los Team Leads reportan al CTO.",
+   "estado": "borrador"
+  },
+  {
+   "id": "dev_backend",
+   "area": "desarrollo",
+   "en": "Backend Developer",
+   "es": "Desarrollador/a Backend",
+   "parent": "team_lead",
+   "reporta": "Team Lead",
+   "supervisa": "—",
+   "mision": "Diseñar, construir y mantener la lógica de negocio, las APIs y las bases de datos de las soluciones de GoodApps con calidad, seguridad y rendimiento.",
+   "resp": [
+    "Implementar servicios, APIs e integraciones según el diseño técnico acordado.",
+    "Modelar y optimizar bases de datos y consultas.",
+    "Escribir pruebas y participar en revisiones de código.",
+    "Documentar lo desarrollado y mantener la deuda técnica bajo control.",
+    "Estimar y reportar avance de sus tareas.",
+    "Mentorear a perfiles junior y pasantes (niveles senior)."
+   ],
+   "req": {
+    "form": "Tecnicatura o título en sistemas (o en curso para pasantes).",
+    "exp": "Según nivel: pasante (0), junior (0-2 años), semi senior (2-5), senior (5+).",
+    "tec": [
+     "Stack backend de GoodApps",
+     "APIs REST",
+     "SQL y bases de datos",
+     "Git",
+     "Testing",
+     "Nociones de cloud"
+    ]
+   },
+   "comp": [
+    "Responsabilidad",
+    "Criterio técnico",
+    "Colaboración",
+    "Aprendizaje continuo"
+   ],
+   "kpi": [
+    "Entregas en plazo y calidad",
+    "Defectos por entrega",
+    "Aportes en revisiones",
+    "Avance en plan de desarrollo (junior/pasante)"
+   ],
+   "carrera": "Pasante → Junior → Semi Senior → Senior I/II/III → Team Lead o Arquitecto.",
+   "nota": "Sep-2026, 13 personas: Brian Arce (Sr), Santiago Bruno (Sr II, también Team Lead), Paulo Bertino (SSr), Pablo Algarra (Sr I), Rodrigo Román (SSr), Julián Martínez (SSr), Ulises Farías (SSr), Renzo Dipierri (SSr), Matías Bertino (Jr), Axel Bustos (Jr), Jeremías Roschge (Jr), Bautista Defago (pasante jr), Enzo Gaido (pasante jr), Emanuel Paz (pasante jr).",
+   "estado": "borrador"
+  },
+  {
+   "id": "dev_frontend",
+   "area": "desarrollo",
+   "en": "Frontend Developer",
+   "es": "Desarrollador/a Frontend",
+   "parent": "team_lead",
+   "reporta": "Team Lead",
+   "supervisa": "—",
+   "mision": "Construir interfaces web y móviles fieles al diseño UX/UI, accesibles, performantes y mantenibles.",
+   "resp": [
+    "Implementar pantallas y componentes a partir de los diseños de UX/UI.",
+    "Integrar con APIs y manejar estado, validaciones y errores.",
+    "Asegurar accesibilidad, rendimiento y compatibilidad.",
+    "Escribir pruebas y participar en revisiones de código.",
+    "Estimar y reportar avance de sus tareas.",
+    "Mentorear a perfiles junior y pasantes (niveles senior)."
+   ],
+   "req": {
+    "form": "Tecnicatura o título en sistemas (o en curso para pasantes).",
+    "exp": "Según nivel: pasante (0), junior (0-2 años), semi senior (2-5), senior (5+).",
+    "tec": [
+     "Stack frontend de GoodApps",
+     "HTML/CSS/JavaScript",
+     "Frameworks web y móviles",
+     "Consumo de APIs",
+     "Git",
+     "Testing"
+    ]
+   },
+   "comp": [
+    "Atención al detalle",
+    "Criterio técnico",
+    "Colaboración",
+    "Aprendizaje continuo"
+   ],
+   "kpi": [
+    "Entregas en plazo y calidad",
+    "Fidelidad al diseño",
+    "Defectos por entrega",
+    "Avance en plan de desarrollo (junior/pasante)"
+   ],
+   "carrera": "Pasante → Junior → Semi Senior → Senior I/II/III → Team Lead.",
+   "nota": "Sep-2026, 10 personas: Mauricio Hongn (Sr II, también Team Lead), Luciano Bruno (Sr), Franco Sánchez (Sr), Bruno Cravero (SSr), Matías Sayas (SSr), Nicolás Toconás (SSr), Valentín Juárez (Jr), Martín Bordón (Jr), Juan Ignacio Bertossi (pasante jr), Ariela Rivalta (pasante jr).",
+   "estado": "borrador"
+  },
+  {
+   "id": "dev_fullstack",
+   "area": "desarrollo",
+   "en": "Full Stack Developer",
+   "es": "Desarrollador/a Full Stack",
+   "parent": "team_lead",
+   "reporta": "Team Lead",
+   "supervisa": "—",
+   "mision": "Desarrollar soluciones de punta a punta —backend y frontend— con autonomía, especialmente en proyectos que requieren un perfil integral.",
+   "resp": [
+    "Implementar funcionalidades completas: API, base de datos e interfaz.",
+    "Diseñar técnicamente módulos de complejidad media/alta.",
+    "Escribir pruebas y participar en revisiones de código.",
+    "Documentar y estimar su trabajo.",
+    "Mentorear a perfiles junior (niveles senior)."
+   ],
+   "req": {
+    "form": "Tecnicatura o título en sistemas.",
+    "exp": "Según nivel: junior (0-2 años), semi senior (2-5), senior (5+).",
+    "tec": [
+     "Stack completo de GoodApps",
+     "APIs y bases de datos",
+     "Frameworks frontend",
+     "Git",
+     "Testing",
+     "Cloud básico"
+    ]
+   },
+   "comp": [
+    "Autonomía",
+    "Criterio técnico",
+    "Versatilidad",
+    "Colaboración"
+   ],
+   "kpi": [
+    "Entregas en plazo y calidad",
+    "Defectos por entrega",
+    "Aportes en revisiones"
+   ],
+   "carrera": "Junior → Semi Senior → Senior I/II/III → Team Lead o Arquitecto.",
+   "nota": "Sep-2026: Santiago Luque Fessia (Sr), Agustín Abba (Sr, remoto), Mariano Raisberg (Jr, externo).",
+   "estado": "borrador"
+  },
+  {
+   "id": "qa_analyst",
+   "area": "desarrollo",
+   "en": "QA Analyst",
+   "es": "Analista de QA / Testing",
+   "parent": "team_lead",
+   "reporta": "Team Lead del proyecto",
+   "supervisa": "—",
+   "mision": "Verificar que el software cumpla los requerimientos y los criterios de calidad antes de su liberación, y hacer crecer la práctica de testing en GoodApps.",
+   "resp": [
+    "Diseñar y ejecutar casos de prueba funcionales y de regresión.",
+    "Registrar, priorizar y dar seguimiento a defectos.",
+    "Participar en la automatización de pruebas y su integración en CI/CD.",
+    "Documentar evidencias y reportar métricas de calidad.",
+    "Definir criterios de aceptación junto a PO y desarrollo."
+   ],
+   "req": {
+    "form": "Tecnicatura en sistemas o formación en testing; ISTQB deseable.",
+    "exp": "Según nivel: junior (0-2 años), semi senior (2-5).",
+    "tec": [
+     "Diseño de casos de prueba",
+     "Herramientas de gestión de defectos",
+     "SQL básico",
+     "Automatización (Selenium, Playwright, etc.)"
+    ]
+   },
+   "comp": [
+    "Atención al detalle",
+    "Rigor",
+    "Comunicación",
+    "Paciencia"
+   ],
+   "kpi": [
+    "Defectos detectados antes de producción",
+    "Cobertura de pruebas",
+    "Tiempo de ciclo de QA"
+   ],
+   "carrera": "Junior → Semi Senior → Senior → QA Lead.",
+   "nota": "Sep-2026: Yamila Carrizo (semi senior, externa) e Ingrid Montón (junior, externa). El puesto Test Lead se eliminó; reportan al Team Lead del proyecto en el que trabajan.",
+   "estado": "borrador"
+  },
+  {
+   "id": "support",
+   "area": "desarrollo",
+   "en": "Support First Line",
+   "es": "Soporte de Primera Línea (Mesa de Ayuda)",
+   "parent": "team_lead",
+   "reporta": "Team Lead (Gabriel Perrotti)",
+   "supervisa": "—",
+   "mision": "Atender y resolver las consultas e incidentes de los clientes sobre los sistemas implementados, escalando lo que corresponda al equipo de desarrollo.",
+   "resp": [
+    "Recibir, registrar y clasificar tickets de soporte.",
+    "Resolver incidentes de primer nivel y guiar al usuario.",
+    "Escalar y hacer seguimiento de incidentes de segundo nivel.",
+    "Mantener la base de conocimiento y reportar métricas de soporte.",
+    "Detectar mejoras recurrentes y comunicarlas a PO/PM."
+   ],
+   "req": {
+    "form": "Tecnicatura en sistemas o en curso.",
+    "exp": "1+ año en soporte o atención al cliente.",
+    "tec": [
+     "Herramientas de ticketing",
+     "Productos y sistemas de GoodApps",
+     "Comunicación escrita"
+    ]
+   },
+   "comp": [
+    "Servicio",
+    "Paciencia",
+    "Comunicación",
+    "Resolución de problemas"
+   ],
+   "kpi": [
+    "Tiempo de primera respuesta",
+    "Tiempo de resolución",
+    "Satisfacción del usuario"
+   ],
+   "carrera": "Hacia Soporte N2 / Analista Funcional.",
+   "nota": "Rocío Luque Valiente (junior, relación de dependencia). Reporta a Gabriel Perrotti (Team Lead). La Mesa de Ayuda está dentro del alcance de la certificación ISO 9001.",
+   "estado": "borrador"
+  },
+  {
+   "id": "design_manager",
+   "area": "diseno",
+   "en": "Design Manager",
+   "es": "Gerente de Diseño",
+   "parent": "diseno",
+   "reporta": "COO",
+   "supervisa": "Diseñadoras UX/UI y Marketing",
+   "mision": "Conducir el área de Diseño: estándares de UX/UI e identidad visual, capacidad del equipo y calidad de lo entregado.",
+   "resp": [
+    "Definir procesos, herramientas y estándares de diseño (design system, accesibilidad).",
+    "Planificar la asignación de diseñadores a proyectos junto a PM.",
+    "Asegurar la calidad de entregables de UX/UI y gráfica.",
+    "Liderar, evaluar y desarrollar al equipo de diseño.",
+    "Participar en propuestas comerciales con visión de experiencia de usuario."
+   ],
+   "req": {
+    "form": "Título en diseño, UX o afín.",
+    "exp": "5+ años en diseño digital, 2+ liderando.",
+    "tec": [
+     "Figma / herramientas de diseño",
+     "Design systems",
+     "Investigación de usuarios",
+     "Gestión de equipos"
+    ]
+   },
+   "comp": [
+    "Liderazgo",
+    "Criterio estético y funcional",
+    "Comunicación",
+    "Organización"
+   ],
+   "kpi": [
+    "Entregas de diseño en plazo",
+    "Satisfacción de clientes con UX",
+    "Crecimiento del equipo"
+   ],
+   "carrera": "Hacia Head of Design.",
+   "nota": "Estefanía Alloco (COO), también Team Lead del equipo UX/UI. Sin Design Lead ni Graphic Designer separados: el equipo UX/UI cubre también la gráfica (piezas comerciales, marca).",
+   "estado": "borrador"
+  },
+  {
+   "id": "ux_designer",
+   "area": "diseno",
+   "en": "UX/UI Designer",
+   "es": "Diseñador/a UX/UI",
+   "parent": "design_manager",
+   "reporta": "Design Manager",
+   "supervisa": "—",
+   "mision": "Diseñar experiencias e interfaces de productos digitales —de la investigación al handoff— y producir las piezas gráficas que necesitan Comercial, Marketing y los clientes.",
+   "resp": [
+    "Relevar necesidades y diseñar flujos, wireframes y prototipos.",
+    "Diseñar interfaces y componentes; mantener el design system.",
+    "Preparar especificaciones y assets para desarrollo; validar la implementación.",
+    "Producir piezas gráficas para propuestas comerciales, redes y marca.",
+    "Participar en pruebas de usabilidad y revisiones.",
+    "Mentorear a perfiles junior y pasantes (niveles senior)."
+   ],
+   "req": {
+    "form": "Título o estudios en diseño, UX o afín (en curso para pasantes).",
+    "exp": "Según nivel: pasante (0), junior (0-2 años), senior (5+).",
+    "tec": [
+     "Figma",
+     "Design systems",
+     "Prototipado",
+     "Investigación de usuarios",
+     "Adobe / gráfica",
+     "Accesibilidad"
+    ]
+   },
+   "comp": [
+    "Criterio estético y funcional",
+    "Prolijidad",
+    "Comunicación",
+    "Empatía con el usuario"
+   ],
+   "kpi": [
+    "Entregas en plazo",
+    "Fidelidad de implementación",
+    "Satisfacción del cliente con UX"
+   ],
+   "carrera": "Pasante → Junior → Semi Senior → Senior I/II → Design Lead.",
+   "nota": "Sep-2026: Valentina Aratano (Sr I, remoto), Sofía Garófalo (Sr, externa), Lola Alén (Jr, a prueba, remoto), Mélani Varas (pasante no rentada).",
+   "estado": "borrador"
+  },
+  {
+   "id": "it_manager",
+   "area": "infra",
+   "en": "IT & Infrastructure",
+   "es": "Infraestructura y TI",
+   "parent": "infra",
+   "reporta": "CTO",
+   "supervisa": "—",
+   "mision": "Garantizar la disponibilidad, seguridad y eficiencia de la infraestructura tecnológica interna y de los entornos de los clientes.",
+   "resp": [
+    "Administrar servidores, cloud, redes, dominios, backups y accesos.",
+    "Definir y aplicar políticas de seguridad de la información.",
+    "Dar soporte técnico interno (equipos, cuentas, herramientas).",
+    "Gestionar proveedores de hosting, licencias y servicios.",
+    "Monitorear disponibilidad y responder a incidentes.",
+    "Documentar la infraestructura y los procedimientos de recuperación."
+   ],
+   "req": {
+    "form": "Tecnicatura o título en sistemas/redes.",
+    "exp": "3+ años en administración de infraestructura.",
+    "tec": [
+     "Linux/Windows Server",
+     "Cloud (AWS/Azure/GCP)",
+     "Redes y seguridad",
+     "Backups y DR",
+     "Docker / CI/CD"
+    ]
+   },
+   "comp": [
+    "Responsabilidad",
+    "Rigor",
+    "Resolución de problemas",
+    "Disponibilidad"
+   ],
+   "kpi": [
+    "Uptime",
+    "Incidentes de seguridad",
+    "Tiempo de resolución de incidentes",
+    "Backups verificados"
+   ],
+   "carrera": "Hacia DevOps Lead / Head of Infrastructure.",
+   "nota": "Sergio Bertolez, externo, reporta al CTO. Confirmado sep-2026.",
+   "estado": "borrador"
+  }
+ ],
+ "people": [
+  {
+   "id": "enzo",
+   "nombre": "Enzo Varela",
+   "roles": [
+    "ceo",
+    "sales_manager"
+   ],
+   "nivel": "LÍDER",
+   "modalidad": "Socio fundador",
+   "loc": "Villa del Rosario",
+   "titulo": "Mgter. Lic. Analista de Sistemas"
+  },
+  {
+   "id": "julian",
+   "nombre": "José Julián Racca",
+   "roles": [
+    "cto"
+   ],
+   "nivel": "LÍDER",
+   "modalidad": "Relación de dependencia · socio/director",
+   "loc": "Villa del Rosario",
+   "titulo": "Tec. Sup. Desarrollo de Software"
+  },
+  {
+   "id": "estefania",
+   "nombre": "Estefanía Analía Alloco",
+   "roles": [
+    "coo",
+    "design_manager"
+   ],
+   "nivel": "LÍDER",
+   "modalidad": "Relación de dependencia · socia/directora",
+   "loc": "Villa del Rosario",
+   "titulo": "Tec. Sup. Diseño Gráfico y Publicitario",
+   "tel": "3573 - 495356"
+  },
+  {
+   "id": "lorena",
+   "nombre": "Lorena Soledad Garrido",
+   "roles": [
+    "hr_manager"
+   ],
+   "nivel": "LÍDER",
+   "modalidad": "Relación de dependencia · híbrida",
+   "loc": "Córdoba Capital",
+   "titulo": "Lic. — Gerente de Gestión del Talento",
+   "ingreso": "07/09/2026"
+  },
+  {
+   "id": "laura",
+   "nombre": "María Laura Rojas",
+   "roles": [
+    "hr_assistant",
+    "admin_manager",
+    "quality_manager"
+   ],
+   "nivel": "LÍDER",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": "Administración / Gestión del Talento / Calidad"
+  },
+  {
+   "id": "llopez",
+   "nombre": "Leonardo Mauricio López Monfrinotti",
+   "roles": [
+    "sales_gm"
+   ],
+   "nivel": "LÍDER",
+   "modalidad": "Relación de dependencia · híbrido/remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "erobledo",
+   "nombre": "Enzo Gabriel Robledo",
+   "roles": [
+    "account_exec"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "leonardo",
+   "nombre": "Leonardo Ignacio Aratano",
+   "roles": [
+    "account_exec",
+    "po"
+   ],
+   "nivel": "SENIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "Córdoba",
+   "titulo": "Mgter. Ing. · Analista funcional"
+  },
+  {
+   "id": "mcarle",
+   "nombre": "Marcos Carle",
+   "roles": [
+    "inst_consultant"
+   ],
+   "nivel": null,
+   "modalidad": "Externo",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "ludmila",
+   "nombre": "Ludmila Cuassolo",
+   "roles": [
+    "content_manager"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "carina",
+   "nombre": "Carina Del Valle Ludueña",
+   "roles": [
+    "maint_assistant"
+   ],
+   "nivel": null,
+   "modalidad": "Externo",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "bria",
+   "nombre": "Emmanuel Augusto Bría",
+   "roles": [
+    "idi_lead"
+   ],
+   "nivel": "SENIOR III",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "afernandez",
+   "nombre": "Alexandro Nahuel Fernández",
+   "roles": [
+    "ai_dev"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "acontreras",
+   "nombre": "Aníbal Eduardo Contreras Sánchez",
+   "roles": [
+    "ai_dev"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "frodriguez",
+   "nombre": "Facundo Jesús Rodríguez",
+   "roles": [
+    "ai_dev"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "romina",
+   "nombre": "Romina del Valle Giaveno",
+   "roles": [
+    "pm"
+   ],
+   "nivel": "SENIOR",
+   "modalidad": "Relación de dependencia · remoto",
+   "loc": "pendiente",
+   "titulo": "Ing. en Sistemas de la Información · Referente del área"
+  },
+  {
+   "id": "massucco",
+   "nombre": "Agustín Massucco",
+   "roles": [
+    "pm",
+    "po"
+   ],
+   "nivel": "SENIOR",
+   "modalidad": "Relación de dependencia · remoto/híbrido",
+   "loc": "pendiente",
+   "titulo": "Contador · Analista funcional"
+  },
+  {
+   "id": "vincenti",
+   "nombre": "Marina Elizabeth Vincenti",
+   "roles": [
+    "pm"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "lcampos",
+   "nombre": "Lucas Gastón Campos",
+   "roles": [
+    "po"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Relación de dependencia · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "dettori",
+   "nombre": "Stefano Lorenzo Dettori",
+   "roles": [
+    "po"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": "Analista funcional"
+  },
+  {
+   "id": "gabriel",
+   "nombre": "Gabriel Alejandro Perrotti",
+   "roles": [
+    "team_lead",
+    "po"
+   ],
+   "nivel": "SENIOR II",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "mauricio",
+   "nombre": "Mauricio Gabriel Hongn",
+   "roles": [
+    "team_lead",
+    "dev_frontend"
+   ],
+   "nivel": "SENIOR II",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "santiagob",
+   "nombre": "Santiago Alfredo Bruno",
+   "roles": [
+    "team_lead",
+    "dev_backend"
+   ],
+   "nivel": "SENIOR II",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "brian",
+   "nombre": "Brian Alexander Arce",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "SENIOR",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "pablo",
+   "nombre": "Pablo Algarra",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "SENIOR I",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "paulo",
+   "nombre": "Paulo Alejandro Bertino",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Relación de dependencia · remoto",
+   "loc": "Río Segundo",
+   "titulo": ""
+  },
+  {
+   "id": "rroman",
+   "nombre": "Rodrigo Rubén Román",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "jmartinez",
+   "nombre": "Julián Alejandro Martínez",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "ufarias",
+   "nombre": "Ulises Nicolás Farías",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Relación de dependencia · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "rdipierri",
+   "nombre": "Renzo Elian Dipierri",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "matias",
+   "nombre": "Matías Emiliano Bertino",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Relación de dependencia · remoto",
+   "loc": "Río Segundo",
+   "titulo": ""
+  },
+  {
+   "id": "abustos",
+   "nombre": "Axel Ivan Bustos",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "jroschge",
+   "nombre": "Jeremías Roschge",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Relación de dependencia · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "bautista",
+   "nombre": "Bautista Defago Giraudo",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "PASANTE JUNIOR",
+   "modalidad": "Pasantía rentada",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "enzogaido",
+   "nombre": "Enzo Santiago Gaido",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "PASANTE JUNIOR",
+   "modalidad": "Pasantía rentada",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "emanuelp",
+   "nombre": "Emanuel Paz",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "PASANTE JUNIOR",
+   "modalidad": "Pasantía rentada",
+   "loc": "Pilar",
+   "titulo": ""
+  },
+  {
+   "id": "luciano",
+   "nombre": "Luciano Sebastián Bruno",
+   "roles": [
+    "dev_frontend"
+   ],
+   "nivel": "SENIOR",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "francos",
+   "nombre": "Franco Andrés Sánchez",
+   "roles": [
+    "dev_frontend"
+   ],
+   "nivel": "SENIOR",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "bruno",
+   "nombre": "Bruno Cravero",
+   "roles": [
+    "dev_frontend"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "msayas",
+   "nombre": "Matías Agustín Sayas",
+   "roles": [
+    "dev_frontend"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Relación de dependencia · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "ntoconas",
+   "nombre": "Nicolás Santiago Toconás Caldera",
+   "roles": [
+    "dev_frontend"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "vjuarez",
+   "nombre": "Valentín Gabriel Juárez",
+   "roles": [
+    "dev_frontend"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Relación de dependencia",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "mbordon",
+   "nombre": "Martín Ignacio Bordón Ruiz",
+   "roles": [
+    "dev_frontend"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "juanignacio",
+   "nombre": "Juan Ignacio Bertossi",
+   "roles": [
+    "dev_frontend"
+   ],
+   "nivel": "PASANTE JUNIOR",
+   "modalidad": "Pasantía rentada",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "arivalta",
+   "nombre": "Ariela Astrid Rivalta",
+   "roles": [
+    "dev_frontend"
+   ],
+   "nivel": "PASANTE JUNIOR",
+   "modalidad": "Pasantía rentada",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "santiagof",
+   "nombre": "Santiago Luque Fessia",
+   "roles": [
+    "dev_fullstack"
+   ],
+   "nivel": "SENIOR",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "agustin",
+   "nombre": "Agustín Abba",
+   "roles": [
+    "dev_fullstack"
+   ],
+   "nivel": "SENIOR",
+   "modalidad": "Relación de dependencia · remoto",
+   "loc": "Villa María",
+   "titulo": ""
+  },
+  {
+   "id": "mraisberg",
+   "nombre": "Mariano Ezequiel Raisberg",
+   "roles": [
+    "dev_fullstack"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "ycarrizo",
+   "nombre": "Yamila Makarena Carrizo",
+   "roles": [
+    "qa_analyst"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "imonton",
+   "nombre": "Ingrid Janet Montón",
+   "roles": [
+    "qa_analyst"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "rocio",
+   "nombre": "Rocío Soledad Luque Valiente",
+   "roles": [
+    "support"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Relación de dependencia",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "valentina",
+   "nombre": "Valentina Aratano Maiorano",
+   "roles": [
+    "ux_designer"
+   ],
+   "nivel": "SENIOR I",
+   "modalidad": "Relación de dependencia · remoto",
+   "loc": "Córdoba",
+   "titulo": "Lic. Diseño Gráfico"
+  },
+  {
+   "id": "sgarofalo",
+   "nombre": "Sofía Garófalo",
+   "roles": [
+    "ux_designer"
+   ],
+   "nivel": "SENIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "lalen",
+   "nombre": "Lola Carolina Alén",
+   "roles": [
+    "ux_designer"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "A prueba · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "mvaras",
+   "nombre": "Mélani Lucila Varas",
+   "roles": [
+    "ux_designer"
+   ],
+   "nivel": "PASANTE",
+   "modalidad": "Pasantía no rentada",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "sergio",
+   "nombre": "Sergio Bertolez",
+   "roles": [
+    "it_manager"
+   ],
+   "nivel": null,
+   "modalidad": "Externo",
+   "loc": "Freelance",
+   "titulo": "Anal. Sist."
+  }
+ ],
+ "offsets": {},
+ "niveles": [
+  "PASANTE",
+  "PASANTE JUNIOR",
+  "JUNIOR",
+  "SEMI SENIOR",
+  "SENIOR",
+  "SENIOR I",
+  "SENIOR II",
+  "SENIOR III",
+  "LÍDER"
+ ]
+}
