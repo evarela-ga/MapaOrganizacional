@@ -259,7 +259,7 @@ button{cursor:pointer;background:none;border:0;padding:0}
     const [dlCap, setDlCap] = useState(undefined);
     useEffect(() => { if (isStatic) { setArtifactCap(null); setDlCap(null); setSampleCap(null); return; } claude.use("artifact").then(setArtifactCap); claude.use("downloads").then(setDlCap); claude.use("sample").then(v => setSampleCap(() => v)); }, []);
     useEffect(() => { if (chatEndRef.current) chatEndRef.current.scrollIntoView({ block: "end" }); }, [msgs, busy]);
-    useEffect(() => { if (!isStatic) return; (async () => { try { const r = await fetch("goodapps-ai-config.json", { cache: "no-store" }); if (r.ok) { const c = await r.json(); if (c && c.key && !/REEMPLAZAR/i.test(c.key)) setCfgAi(c); } } catch (e) {} })(); }, []);
+    useEffect(() => { if (!isStatic) return; (async () => { try { const r = await fetch("goodapps-ai-config.json", { cache: "no-store" }); if (r.ok) { const c = await r.json(); if (c && ((c.proxy && /^https:\/\//.test(c.proxy)) || (c.key && !/REEMPLAZAR/i.test(c.key)))) setCfgAi(c); } } catch (e) {} })(); }, []);
     async function preguntar() {
       const q = pregunta.trim(); if (!q || busy) return;
       const hist = [...msgs, { role: "user", content: q }];
@@ -279,12 +279,14 @@ button{cursor:pointer;background:none;border:0;padding:0}
           const r = await fn(turns, { onText: t => setMsgs([...hist, { role: "assistant", content: t.text || "…" }]) });
           setMsgs([...hist, { role: "assistant", content: (r && r.text) || String(r) }]);
         } else if (isStatic) {
+          const useProxy = (cfgAi && cfgAi.proxy) || "";
           const useKey = aiKey || (cfgAi && cfgAi.key) || "";
-          const useModel = aiKey ? (aiModel || "gpt-4o-mini") : (cfgAi && cfgAi.model) || aiModel || "gpt-4o-mini";
-          if (!useKey) { setMsgs([...hist, { role: "assistant", content: "Cargá tu API key de OpenAI en el campo de arriba (queda guardada solo en este navegador)." }]); setBusy(false); return; }
-          const res = await fetch("https://api.openai.com/v1/chat/completions", { method: "POST", headers: { "Content-Type": "application/json", Authorization: "Bearer " + useKey },
+          const useModel = aiKey && !useProxy ? (aiModel || "gpt-4o-mini") : (cfgAi && cfgAi.model) || aiModel || "gpt-4o-mini";
+          if (!useProxy && !useKey) { setMsgs([...hist, { role: "assistant", content: "Cargá tu API key de OpenAI en el campo de arriba (queda guardada solo en este navegador)." }]); setBusy(false); return; }
+          const res = await fetch(useProxy || "https://api.openai.com/v1/chat/completions", { method: "POST", headers: useProxy ? { "Content-Type": "application/json" } : { "Content-Type": "application/json", Authorization: "Bearer " + useKey },
             body: JSON.stringify({ model: useModel, temperature: 0.2, messages: [{ role: "system", content: ctx }, ...hist] }) });
-          if (!res.ok) { const code = res.status; setMsgs([...hist, { role: "assistant", content: code === 401 ? "La API key no es válida o expiró." : code === 429 ? "Límite de uso de OpenAI alcanzado; probá en un rato." : "Error de OpenAI (" + code + ")." }]); setBusy(false); return; }
+          if (!res.ok) { const code = res.status; let em = ""; try { const j = await res.json(); em = (j && j.error && j.error.message) || ""; } catch (e) {}
+            setMsgs([...hist, { role: "assistant", content: code === 401 ? "La API key no es válida o expiró." : code === 429 ? "Límite de uso de OpenAI alcanzado; probá en un rato." : (em || "Error de IA (" + code + ").") }]); setBusy(false); return; }
           const data = await res.json();
           setMsgs([...hist, { role: "assistant", content: (data.choices && data.choices[0] && data.choices[0].message.content || "Sin respuesta").trim() }]);
         } else {
@@ -420,7 +422,7 @@ button{cursor:pointer;background:none;border:0;padding:0}
         isStatic && !cfgAi && h("div", { className: "aikey" },
           h("input", { type: "password", placeholder: "API key de OpenAI (sk-…)", value: aiKey, onChange: e => { setAiKey(e.target.value); guardarKey(e.target.value, aiModel); }, "aria-label": "API key de OpenAI", autoComplete: "off" }),
           h("input", { type: "text", className: "modelo", value: aiModel, onChange: e => { setAiModel(e.target.value); guardarKey(aiKey, e.target.value); }, "aria-label": "Modelo" })),
-        isStatic && h("p", { className: "hint keyhint" }, (cfgAi ? "IA habilitada con la clave del sitio. " : "La key queda solo en este navegador. ") + "Cada consulta envía datos del legajo (confidencial) al proveedor de IA."),
+        isStatic && h("p", { className: "hint keyhint" }, (cfgAi ? (cfgAi.proxy ? "IA habilitada para todos los usuarios del sitio. " : "IA habilitada con la clave del sitio. ") : "La key queda solo en este navegador. ") + "Cada consulta envía datos del legajo (confidencial) al proveedor de IA."),
         h("div", { className: "chatlog", role: "log", "aria-live": "polite" },
           msgs.length === 0 && h("div", { className: "chatvacio" }, h("p", null, "Ejemplos:"), h("ul", null,
             h("li", null, "¿Qué rol ocupa Enzo Varela y cuál es su responsabilidad?"),

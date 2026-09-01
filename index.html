@@ -429,7 +429,7 @@ button{cursor:pointer;background:none;border:0;padding:0}
     const chatEndRef = useRef();
     useEffect(() => { if (!window.claude || !window.claude.use) { setSampleCap(null); return; } claude.use("sample").then(v => setSampleCap(() => v)); }, []);
     useEffect(() => { if (chatEndRef.current) chatEndRef.current.scrollIntoView({ block: "end" }); }, [msgs, busy]);
-    useEffect(() => { if (!isStatic) return; (async () => { try { const r = await fetch("goodapps-ai-config.json", { cache: "no-store" }); if (r.ok) { const c = await r.json(); if (c && c.key && !/REEMPLAZAR/i.test(c.key)) setCfgAi(c); } } catch (e) {} })(); }, []);
+    useEffect(() => { if (!isStatic) return; (async () => { try { const r = await fetch("goodapps-ai-config.json", { cache: "no-store" }); if (r.ok) { const c = await r.json(); if (c && ((c.proxy && /^https:\/\//.test(c.proxy)) || (c.key && !/REEMPLAZAR/i.test(c.key)))) setCfgAi(c); } } catch (e) {} })(); }, []);
     const guardarKey = (k, m) => { try { localStorage.setItem("goodapps-ai-key", k); localStorage.setItem("goodapps-ai-model", m); } catch (e) {} };
     async function preguntar() {
       const q = pregunta.trim(); if (!q || busy) return;
@@ -450,14 +450,16 @@ button{cursor:pointer;background:none;border:0;padding:0}
           const r = await fn(turns, { onText: t => setMsgs([...hist, { role: "assistant", content: t.text || "…" }]) });
           setMsgs([...hist, { role: "assistant", content: (r && r.text) || String(r) }]);
         } else if (isStatic) {
+          const useProxy = (cfgAi && cfgAi.proxy) || "";
           const useKey = aiKey || (cfgAi && cfgAi.key) || "";
-          const useModel = aiKey ? (aiModel || "gpt-4o-mini") : (cfgAi && cfgAi.model) || aiModel || "gpt-4o-mini";
-          if (!useKey) { setMsgs([...hist, { role: "assistant", content: "Cargá tu API key de OpenAI en el campo de arriba (queda guardada solo en este navegador)." }]); setBusy(false); return; }
-          const res = await fetch("https://api.openai.com/v1/chat/completions", {
-            method: "POST", headers: { "Content-Type": "application/json", Authorization: "Bearer " + useKey },
+          const useModel = aiKey && !useProxy ? (aiModel || "gpt-4o-mini") : (cfgAi && cfgAi.model) || aiModel || "gpt-4o-mini";
+          if (!useProxy && !useKey) { setMsgs([...hist, { role: "assistant", content: "Cargá tu API key de OpenAI en el campo de arriba (queda guardada solo en este navegador)." }]); setBusy(false); return; }
+          const res = await fetch(useProxy || "https://api.openai.com/v1/chat/completions", {
+            method: "POST", headers: useProxy ? { "Content-Type": "application/json" } : { "Content-Type": "application/json", Authorization: "Bearer " + useKey },
             body: JSON.stringify({ model: useModel, temperature: 0.2, messages: [{ role: "system", content: ctx }, ...hist] })
           });
-          if (!res.ok) { const code = res.status; setMsgs([...hist, { role: "assistant", content: code === 401 ? "La API key no es válida o expiró." : code === 429 ? "Límite de uso de OpenAI alcanzado; probá en un rato." : "Error de OpenAI (" + code + ")." }]); setBusy(false); return; }
+          if (!res.ok) { const code = res.status; let em = ""; try { const j = await res.json(); em = (j && j.error && j.error.message) || ""; } catch (e) {}
+            setMsgs([...hist, { role: "assistant", content: code === 401 ? "La API key no es válida o expiró." : code === 429 ? "Límite de uso de OpenAI alcanzado; probá en un rato." : (em || "Error de IA (" + code + ").") }]); setBusy(false); return; }
           const data = await res.json();
           setMsgs([...hist, { role: "assistant", content: (data.choices && data.choices[0] && data.choices[0].message.content || "Sin respuesta").trim() }]);
         } else {
@@ -640,7 +642,7 @@ button{cursor:pointer;background:none;border:0;padding:0}
         isStatic && !cfgAi && h("div", { className: "aikey" },
           h("input", { type: "password", placeholder: "API key de OpenAI (sk-…)", value: aiKey, onChange: e => { setAiKey(e.target.value); guardarKey(e.target.value, aiModel); }, "aria-label": "API key de OpenAI", autoComplete: "off" }),
           h("input", { type: "text", className: "modelo", value: aiModel, onChange: e => { setAiModel(e.target.value); guardarKey(aiKey, e.target.value); }, "aria-label": "Modelo", title: "Modelo de OpenAI" })),
-        isStatic && h("p", { className: "hint keyhint" }, cfgAi ? "IA habilitada con la clave del sitio (goodapps-ai-config.json)." : "La key queda guardada solo en este navegador; no se sube al repositorio ni al JSON."),
+        isStatic && h("p", { className: "hint keyhint" }, cfgAi ? (cfgAi.proxy ? "IA habilitada para todos los usuarios del sitio." : "IA habilitada con la clave del sitio (goodapps-ai-config.json).") : "La key queda guardada solo en este navegador; no se sube al repositorio ni al JSON."),
         h("div", { className: "chatlog", role: "log", "aria-live": "polite" },
           msgs.length === 0 && h("div", { className: "chatvacio" }, h("p", null, "Ejemplos:"), h("ul", null,
             h("li", null, "¿Quién reporta a la COO?"),
