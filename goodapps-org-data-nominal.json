@@ -1,5 +1,5 @@
 {
- "savedAt": 1788293433942,
+ "savedAt": 1788308269780,
  "meta": {
   "mode": "nominal",
   "version": "v1.8 — estructura 2026 validada · fichas en borrador",
@@ -324,7 +324,7 @@
     "Tiempo de respuesta a consultas"
    ],
    "carrera": "Hacia Analista de Administración de Personal / Payroll.",
-   "nota": "Ocupado por Laura Rojas, que además es Responsable de Administración (su línea jerárquica, que depende del CEO) y Quality Manager. Con la TH Manager la relación es de coordinación funcional: no la evalúa ni le asigna objetivos. Antes de sep-2026 cubría toda la función de RR. HH.",
+   "nota": "Trabajo secundario de Laura Rojas: su puesto principal es Líder de Administración General (línea jerárquica del CEO), además de Quality Manager. Con la TH Manager la relación es de coordinación funcional: no la evalúa ni le asigna objetivos. Antes de sep-2026 cubría toda la función de RR. HH.",
    "estado": "borrador"
   },
   {
@@ -1302,14 +1302,14 @@
    "id": "laura",
    "nombre": "María Laura Rojas",
    "roles": [
-    "hr_assistant",
     "admin_manager",
-    "quality_manager"
+    "quality_manager",
+    "hr_assistant"
    ],
    "nivel": "LÍDER",
    "modalidad": "Relación de dependencia · presencial",
    "loc": "Villa del Rosario",
-   "titulo": "Administración / Gestión del Talento / Calidad"
+   "titulo": "Líder de Administración General / Calidad / Gestión del Talento (secundario)"
   },
   {
    "id": "llopez",

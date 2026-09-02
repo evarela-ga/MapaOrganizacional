@@ -1,5 +1,5 @@
 {
- "savedAt": 1788293433980,
+ "savedAt": 1788308269817,
  "meta": {
   "version": "v1.0",
   "confidencial": true
@@ -403,11 +403,11 @@
   {
    "id": "laura",
    "nombre": "María Laura Rojas",
-   "titulo": "Administración / Gestión del Talento / Calidad",
+   "titulo": "Líder de Administración General / Calidad / Gestión del Talento (secundario)",
    "roles": [
-    "hr_assistant",
     "admin_manager",
-    "quality_manager"
+    "quality_manager",
+    "hr_assistant"
    ],
    "nivel": "LÍDER",
    "modalidad": "Relación de dependencia · presencial",
