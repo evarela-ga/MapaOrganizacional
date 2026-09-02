@@ -1,5 +1,5 @@
 {
- "savedAt": 1788308269780,
+ "savedAt": 1788314468163,
  "meta": {
   "mode": "nominal",
   "version": "v1.8 — estructura 2026 validada · fichas en borrador",
@@ -1251,31 +1251,41 @@
  ],
  "people": [
   {
-   "id": "enzo",
-   "nombre": "Enzo Varela",
+   "id": "agustin",
+   "nombre": "Abba, Agustín",
    "roles": [
-    "ceo",
-    "sales_manager"
+    "dev_fullstack"
    ],
-   "nivel": "LÍDER",
-   "modalidad": "Socio fundador",
-   "loc": "Villa del Rosario",
-   "titulo": "Mgter. Lic. Analista de Sistemas"
+   "nivel": "SENIOR",
+   "modalidad": "Relación de dependencia · remoto",
+   "loc": "Villa María",
+   "titulo": ""
   },
   {
-   "id": "julian",
-   "nombre": "José Julián Racca",
+   "id": "lalen",
+   "nombre": "Alén, Lola Carolina",
    "roles": [
-    "cto"
+    "ux_designer"
    ],
-   "nivel": "LÍDER",
-   "modalidad": "Relación de dependencia · socio/director",
+   "nivel": "JUNIOR",
+   "modalidad": "A prueba · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "pablo",
+   "nombre": "Algarra, Pablo",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "SENIOR I",
+   "modalidad": "Relación de dependencia · presencial",
    "loc": "Villa del Rosario",
-   "titulo": "Tec. Sup. Desarrollo de Software"
+   "titulo": ""
   },
   {
    "id": "estefania",
-   "nombre": "Estefanía Analía Alloco",
+   "nombre": "Alloco, Estefanía Analía",
    "roles": [
     "coo",
     "design_manager"
@@ -1287,8 +1297,285 @@
    "tel": "3573 - 495356"
   },
   {
+   "id": "leonardo",
+   "nombre": "Aratano, Leonardo Ignacio",
+   "roles": [
+    "account_exec",
+    "po"
+   ],
+   "nivel": "SENIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "Córdoba",
+   "titulo": "Mgter. Ing. · Analista funcional"
+  },
+  {
+   "id": "valentina",
+   "nombre": "Aratano Maiorano, Valentina",
+   "roles": [
+    "ux_designer"
+   ],
+   "nivel": "SENIOR I",
+   "modalidad": "Relación de dependencia · remoto",
+   "loc": "Córdoba",
+   "titulo": "Lic. Diseño Gráfico"
+  },
+  {
+   "id": "brian",
+   "nombre": "Arce, Brian Alexander",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "SENIOR",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "matias",
+   "nombre": "Bertino, Matías Emiliano",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Relación de dependencia · remoto",
+   "loc": "Río Segundo",
+   "titulo": ""
+  },
+  {
+   "id": "paulo",
+   "nombre": "Bertino, Paulo Alejandro",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Relación de dependencia · remoto",
+   "loc": "Río Segundo",
+   "titulo": ""
+  },
+  {
+   "id": "sergio",
+   "nombre": "Bertolez, Sergio",
+   "roles": [
+    "it_manager"
+   ],
+   "nivel": null,
+   "modalidad": "Externo",
+   "loc": "Freelance",
+   "titulo": "Anal. Sist."
+  },
+  {
+   "id": "juanignacio",
+   "nombre": "Bertossi, Juan Ignacio",
+   "roles": [
+    "dev_frontend"
+   ],
+   "nivel": "PASANTE JUNIOR",
+   "modalidad": "Pasantía rentada",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "mbordon",
+   "nombre": "Bordón Ruiz, Martín Ignacio",
+   "roles": [
+    "dev_frontend"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "bria",
+   "nombre": "Bría, Emmanuel Augusto",
+   "roles": [
+    "idi_lead"
+   ],
+   "nivel": "SENIOR III",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "luciano",
+   "nombre": "Bruno, Luciano Sebastián",
+   "roles": [
+    "dev_frontend"
+   ],
+   "nivel": "SENIOR",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "santiagob",
+   "nombre": "Bruno, Santiago Alfredo",
+   "roles": [
+    "team_lead",
+    "dev_backend"
+   ],
+   "nivel": "SENIOR II",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "abustos",
+   "nombre": "Bustos, Axel Ivan",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "lcampos",
+   "nombre": "Campos, Lucas Gastón",
+   "roles": [
+    "po"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Relación de dependencia · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "mcarle",
+   "nombre": "Carle, Marcos",
+   "roles": [
+    "inst_consultant"
+   ],
+   "nivel": null,
+   "modalidad": "Externo",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "ycarrizo",
+   "nombre": "Carrizo, Yamila Makarena",
+   "roles": [
+    "qa_analyst"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "acontreras",
+   "nombre": "Contreras Sánchez, Aníbal Eduardo",
+   "roles": [
+    "ai_dev"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "bruno",
+   "nombre": "Cravero, Bruno",
+   "roles": [
+    "dev_frontend"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "ludmila",
+   "nombre": "Cuassolo, Ludmila",
+   "roles": [
+    "content_manager"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "bautista",
+   "nombre": "Defago Giraudo, Bautista",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "PASANTE JUNIOR",
+   "modalidad": "Pasantía rentada",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "dettori",
+   "nombre": "Dettori, Stefano Lorenzo",
+   "roles": [
+    "po"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": "Analista funcional"
+  },
+  {
+   "id": "rdipierri",
+   "nombre": "Dipierri, Renzo Elian",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "ufarias",
+   "nombre": "Farías, Ulises Nicolás",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Relación de dependencia · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "afernandez",
+   "nombre": "Fernández, Alexandro Nahuel",
+   "roles": [
+    "ai_dev"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "enzogaido",
+   "nombre": "Gaido, Enzo Santiago",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "PASANTE JUNIOR",
+   "modalidad": "Pasantía rentada",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "sgarofalo",
+   "nombre": "Garófalo, Sofía",
+   "roles": [
+    "ux_designer"
+   ],
+   "nivel": "SENIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
    "id": "lorena",
-   "nombre": "Lorena Soledad Garrido",
+   "nombre": "Garrido, Lorena Soledad",
    "roles": [
     "hr_manager"
    ],
@@ -1299,8 +1586,198 @@
    "ingreso": "07/09/2026"
   },
   {
+   "id": "romina",
+   "nombre": "Giaveno, Romina del Valle",
+   "roles": [
+    "pm"
+   ],
+   "nivel": "SENIOR",
+   "modalidad": "Relación de dependencia · remoto",
+   "loc": "pendiente",
+   "titulo": "Ing. en Sistemas de la Información · Referente del área"
+  },
+  {
+   "id": "mauricio",
+   "nombre": "Hongn, Mauricio Gabriel",
+   "roles": [
+    "team_lead",
+    "dev_frontend"
+   ],
+   "nivel": "SENIOR II",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "vjuarez",
+   "nombre": "Juárez, Valentín Gabriel",
+   "roles": [
+    "dev_frontend"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Relación de dependencia",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "llopez",
+   "nombre": "López Monfrinotti, Leonardo Mauricio",
+   "roles": [
+    "sales_gm"
+   ],
+   "nivel": "LÍDER",
+   "modalidad": "Relación de dependencia · híbrido/remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "carina",
+   "nombre": "Ludueña, Carina Del Valle",
+   "roles": [
+    "maint_assistant"
+   ],
+   "nivel": null,
+   "modalidad": "Externo",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "santiagof",
+   "nombre": "Luque Fessia, Santiago",
+   "roles": [
+    "dev_fullstack"
+   ],
+   "nivel": "SENIOR",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "rocio",
+   "nombre": "Luque Valiente, Rocío Soledad",
+   "roles": [
+    "support"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Relación de dependencia",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "jmartinez",
+   "nombre": "Martínez, Julián Alejandro",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "massucco",
+   "nombre": "Massucco, Agustín",
+   "roles": [
+    "pm",
+    "po"
+   ],
+   "nivel": "SENIOR",
+   "modalidad": "Relación de dependencia · remoto/híbrido",
+   "loc": "pendiente",
+   "titulo": "Contador · Analista funcional"
+  },
+  {
+   "id": "imonton",
+   "nombre": "Montón, Ingrid Janet",
+   "roles": [
+    "qa_analyst"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "emanuelp",
+   "nombre": "Paz, Emanuel",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "PASANTE JUNIOR",
+   "modalidad": "Pasantía rentada",
+   "loc": "Pilar",
+   "titulo": ""
+  },
+  {
+   "id": "gabriel",
+   "nombre": "Perrotti, Gabriel Alejandro",
+   "roles": [
+    "team_lead",
+    "po"
+   ],
+   "nivel": "SENIOR II",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
+   "id": "julian",
+   "nombre": "Racca, José Julián",
+   "roles": [
+    "cto"
+   ],
+   "nivel": "LÍDER",
+   "modalidad": "Relación de dependencia · socio/director",
+   "loc": "Villa del Rosario",
+   "titulo": "Tec. Sup. Desarrollo de Software"
+  },
+  {
+   "id": "mraisberg",
+   "nombre": "Raisberg, Mariano Ezequiel",
+   "roles": [
+    "dev_fullstack"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "arivalta",
+   "nombre": "Rivalta, Ariela Astrid",
+   "roles": [
+    "dev_frontend"
+   ],
+   "nivel": "PASANTE JUNIOR",
+   "modalidad": "Pasantía rentada",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "erobledo",
+   "nombre": "Robledo, Enzo Gabriel",
+   "roles": [
+    "account_exec"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Relación de dependencia · presencial",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "frodriguez",
+   "nombre": "Rodríguez, Facundo Jesús",
+   "roles": [
+    "ai_dev"
+   ],
+   "nivel": "JUNIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
+  },
+  {
    "id": "laura",
-   "nombre": "María Laura Rojas",
+   "nombre": "Rojas, María Laura",
    "roles": [
     "admin_manager",
     "quality_manager",
@@ -1312,310 +1789,19 @@
    "titulo": "Líder de Administración General / Calidad / Gestión del Talento (secundario)"
   },
   {
-   "id": "llopez",
-   "nombre": "Leonardo Mauricio López Monfrinotti",
-   "roles": [
-    "sales_gm"
-   ],
-   "nivel": "LÍDER",
-   "modalidad": "Relación de dependencia · híbrido/remoto",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "erobledo",
-   "nombre": "Enzo Gabriel Robledo",
-   "roles": [
-    "account_exec"
-   ],
-   "nivel": "SEMI SENIOR",
-   "modalidad": "Relación de dependencia · presencial",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "leonardo",
-   "nombre": "Leonardo Ignacio Aratano",
-   "roles": [
-    "account_exec",
-    "po"
-   ],
-   "nivel": "SENIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "Córdoba",
-   "titulo": "Mgter. Ing. · Analista funcional"
-  },
-  {
-   "id": "mcarle",
-   "nombre": "Marcos Carle",
-   "roles": [
-    "inst_consultant"
-   ],
-   "nivel": null,
-   "modalidad": "Externo",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "ludmila",
-   "nombre": "Ludmila Cuassolo",
-   "roles": [
-    "content_manager"
-   ],
-   "nivel": "JUNIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "carina",
-   "nombre": "Carina Del Valle Ludueña",
-   "roles": [
-    "maint_assistant"
-   ],
-   "nivel": null,
-   "modalidad": "Externo",
-   "loc": "Villa del Rosario",
-   "titulo": ""
-  },
-  {
-   "id": "bria",
-   "nombre": "Emmanuel Augusto Bría",
-   "roles": [
-    "idi_lead"
-   ],
-   "nivel": "SENIOR III",
-   "modalidad": "Relación de dependencia · presencial",
-   "loc": "Villa del Rosario",
-   "titulo": ""
-  },
-  {
-   "id": "afernandez",
-   "nombre": "Alexandro Nahuel Fernández",
-   "roles": [
-    "ai_dev"
-   ],
-   "nivel": "JUNIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "acontreras",
-   "nombre": "Aníbal Eduardo Contreras Sánchez",
-   "roles": [
-    "ai_dev"
-   ],
-   "nivel": "JUNIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "frodriguez",
-   "nombre": "Facundo Jesús Rodríguez",
-   "roles": [
-    "ai_dev"
-   ],
-   "nivel": "JUNIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "romina",
-   "nombre": "Romina del Valle Giaveno",
-   "roles": [
-    "pm"
-   ],
-   "nivel": "SENIOR",
-   "modalidad": "Relación de dependencia · remoto",
-   "loc": "pendiente",
-   "titulo": "Ing. en Sistemas de la Información · Referente del área"
-  },
-  {
-   "id": "massucco",
-   "nombre": "Agustín Massucco",
-   "roles": [
-    "pm",
-    "po"
-   ],
-   "nivel": "SENIOR",
-   "modalidad": "Relación de dependencia · remoto/híbrido",
-   "loc": "pendiente",
-   "titulo": "Contador · Analista funcional"
-  },
-  {
-   "id": "vincenti",
-   "nombre": "Marina Elizabeth Vincenti",
-   "roles": [
-    "pm"
-   ],
-   "nivel": "SEMI SENIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "lcampos",
-   "nombre": "Lucas Gastón Campos",
-   "roles": [
-    "po"
-   ],
-   "nivel": "SEMI SENIOR",
-   "modalidad": "Relación de dependencia · remoto",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "dettori",
-   "nombre": "Stefano Lorenzo Dettori",
-   "roles": [
-    "po"
-   ],
-   "nivel": "JUNIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": "Analista funcional"
-  },
-  {
-   "id": "gabriel",
-   "nombre": "Gabriel Alejandro Perrotti",
-   "roles": [
-    "team_lead",
-    "po"
-   ],
-   "nivel": "SENIOR II",
-   "modalidad": "Relación de dependencia · presencial",
-   "loc": "Villa del Rosario",
-   "titulo": ""
-  },
-  {
-   "id": "mauricio",
-   "nombre": "Mauricio Gabriel Hongn",
-   "roles": [
-    "team_lead",
-    "dev_frontend"
-   ],
-   "nivel": "SENIOR II",
-   "modalidad": "Relación de dependencia · presencial",
-   "loc": "Villa del Rosario",
-   "titulo": ""
-  },
-  {
-   "id": "santiagob",
-   "nombre": "Santiago Alfredo Bruno",
-   "roles": [
-    "team_lead",
-    "dev_backend"
-   ],
-   "nivel": "SENIOR II",
-   "modalidad": "Relación de dependencia · presencial",
-   "loc": "Villa del Rosario",
-   "titulo": ""
-  },
-  {
-   "id": "brian",
-   "nombre": "Brian Alexander Arce",
-   "roles": [
-    "dev_backend"
-   ],
-   "nivel": "SENIOR",
-   "modalidad": "Relación de dependencia · presencial",
-   "loc": "Villa del Rosario",
-   "titulo": ""
-  },
-  {
-   "id": "pablo",
-   "nombre": "Pablo Algarra",
-   "roles": [
-    "dev_backend"
-   ],
-   "nivel": "SENIOR I",
-   "modalidad": "Relación de dependencia · presencial",
-   "loc": "Villa del Rosario",
-   "titulo": ""
-  },
-  {
-   "id": "paulo",
-   "nombre": "Paulo Alejandro Bertino",
-   "roles": [
-    "dev_backend"
-   ],
-   "nivel": "SEMI SENIOR",
-   "modalidad": "Relación de dependencia · remoto",
-   "loc": "Río Segundo",
-   "titulo": ""
-  },
-  {
    "id": "rroman",
-   "nombre": "Rodrigo Rubén Román",
+   "nombre": "Román, Rodrigo Rubén",
    "roles": [
     "dev_backend"
    ],
    "nivel": "SEMI SENIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "jmartinez",
-   "nombre": "Julián Alejandro Martínez",
-   "roles": [
-    "dev_backend"
-   ],
-   "nivel": "SEMI SENIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "ufarias",
-   "nombre": "Ulises Nicolás Farías",
-   "roles": [
-    "dev_backend"
-   ],
-   "nivel": "SEMI SENIOR",
-   "modalidad": "Relación de dependencia · remoto",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "rdipierri",
-   "nombre": "Renzo Elian Dipierri",
-   "roles": [
-    "dev_backend"
-   ],
-   "nivel": "SEMI SENIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "matias",
-   "nombre": "Matías Emiliano Bertino",
-   "roles": [
-    "dev_backend"
-   ],
-   "nivel": "JUNIOR",
-   "modalidad": "Relación de dependencia · remoto",
-   "loc": "Río Segundo",
-   "titulo": ""
-  },
-  {
-   "id": "abustos",
-   "nombre": "Axel Ivan Bustos",
-   "roles": [
-    "dev_backend"
-   ],
-   "nivel": "JUNIOR",
    "modalidad": "Externo · remoto",
    "loc": "pendiente",
    "titulo": ""
   },
   {
    "id": "jroschge",
-   "nombre": "Jeremías Roschge",
+   "nombre": "Roschge, Jeremías",
    "roles": [
     "dev_backend"
    ],
@@ -1625,74 +1811,19 @@
    "titulo": ""
   },
   {
-   "id": "bautista",
-   "nombre": "Bautista Defago Giraudo",
-   "roles": [
-    "dev_backend"
-   ],
-   "nivel": "PASANTE JUNIOR",
-   "modalidad": "Pasantía rentada",
-   "loc": "Villa del Rosario",
-   "titulo": ""
-  },
-  {
-   "id": "enzogaido",
-   "nombre": "Enzo Santiago Gaido",
-   "roles": [
-    "dev_backend"
-   ],
-   "nivel": "PASANTE JUNIOR",
-   "modalidad": "Pasantía rentada",
-   "loc": "Villa del Rosario",
-   "titulo": ""
-  },
-  {
-   "id": "emanuelp",
-   "nombre": "Emanuel Paz",
-   "roles": [
-    "dev_backend"
-   ],
-   "nivel": "PASANTE JUNIOR",
-   "modalidad": "Pasantía rentada",
-   "loc": "Pilar",
-   "titulo": ""
-  },
-  {
-   "id": "luciano",
-   "nombre": "Luciano Sebastián Bruno",
-   "roles": [
-    "dev_frontend"
-   ],
-   "nivel": "SENIOR",
-   "modalidad": "Relación de dependencia · presencial",
-   "loc": "Villa del Rosario",
-   "titulo": ""
-  },
-  {
    "id": "francos",
-   "nombre": "Franco Andrés Sánchez",
+   "nombre": "Sánchez, Franco Andrés",
    "roles": [
     "dev_frontend"
    ],
    "nivel": "SENIOR",
-   "modalidad": "Relación de dependencia · presencial",
-   "loc": "Villa del Rosario",
-   "titulo": ""
-  },
-  {
-   "id": "bruno",
-   "nombre": "Bruno Cravero",
-   "roles": [
-    "dev_frontend"
-   ],
-   "nivel": "SEMI SENIOR",
    "modalidad": "Relación de dependencia · presencial",
    "loc": "Villa del Rosario",
    "titulo": ""
   },
   {
    "id": "msayas",
-   "nombre": "Matías Agustín Sayas",
+   "nombre": "Sayas, Matías Agustín",
    "roles": [
     "dev_frontend"
    ],
@@ -1703,161 +1834,18 @@
   },
   {
    "id": "ntoconas",
-   "nombre": "Nicolás Santiago Toconás Caldera",
+   "nombre": "Toconás Caldera, Nicolás Santiago",
    "roles": [
     "dev_frontend"
    ],
    "nivel": "SEMI SENIOR",
    "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "vjuarez",
-   "nombre": "Valentín Gabriel Juárez",
-   "roles": [
-    "dev_frontend"
-   ],
-   "nivel": "JUNIOR",
-   "modalidad": "Relación de dependencia",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "mbordon",
-   "nombre": "Martín Ignacio Bordón Ruiz",
-   "roles": [
-    "dev_frontend"
-   ],
-   "nivel": "JUNIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "juanignacio",
-   "nombre": "Juan Ignacio Bertossi",
-   "roles": [
-    "dev_frontend"
-   ],
-   "nivel": "PASANTE JUNIOR",
-   "modalidad": "Pasantía rentada",
-   "loc": "Villa del Rosario",
-   "titulo": ""
-  },
-  {
-   "id": "arivalta",
-   "nombre": "Ariela Astrid Rivalta",
-   "roles": [
-    "dev_frontend"
-   ],
-   "nivel": "PASANTE JUNIOR",
-   "modalidad": "Pasantía rentada",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "santiagof",
-   "nombre": "Santiago Luque Fessia",
-   "roles": [
-    "dev_fullstack"
-   ],
-   "nivel": "SENIOR",
-   "modalidad": "Relación de dependencia · presencial",
-   "loc": "Villa del Rosario",
-   "titulo": ""
-  },
-  {
-   "id": "agustin",
-   "nombre": "Agustín Abba",
-   "roles": [
-    "dev_fullstack"
-   ],
-   "nivel": "SENIOR",
-   "modalidad": "Relación de dependencia · remoto",
-   "loc": "Villa María",
-   "titulo": ""
-  },
-  {
-   "id": "mraisberg",
-   "nombre": "Mariano Ezequiel Raisberg",
-   "roles": [
-    "dev_fullstack"
-   ],
-   "nivel": "JUNIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "ycarrizo",
-   "nombre": "Yamila Makarena Carrizo",
-   "roles": [
-    "qa_analyst"
-   ],
-   "nivel": "SEMI SENIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "imonton",
-   "nombre": "Ingrid Janet Montón",
-   "roles": [
-    "qa_analyst"
-   ],
-   "nivel": "JUNIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "rocio",
-   "nombre": "Rocío Soledad Luque Valiente",
-   "roles": [
-    "support"
-   ],
-   "nivel": "JUNIOR",
-   "modalidad": "Relación de dependencia",
-   "loc": "Villa del Rosario",
-   "titulo": ""
-  },
-  {
-   "id": "valentina",
-   "nombre": "Valentina Aratano Maiorano",
-   "roles": [
-    "ux_designer"
-   ],
-   "nivel": "SENIOR I",
-   "modalidad": "Relación de dependencia · remoto",
-   "loc": "Córdoba",
-   "titulo": "Lic. Diseño Gráfico"
-  },
-  {
-   "id": "sgarofalo",
-   "nombre": "Sofía Garófalo",
-   "roles": [
-    "ux_designer"
-   ],
-   "nivel": "SENIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
-  },
-  {
-   "id": "lalen",
-   "nombre": "Lola Carolina Alén",
-   "roles": [
-    "ux_designer"
-   ],
-   "nivel": "JUNIOR",
-   "modalidad": "A prueba · remoto",
    "loc": "pendiente",
    "titulo": ""
   },
   {
    "id": "mvaras",
-   "nombre": "Mélani Lucila Varas",
+   "nombre": "Varas, Mélani Lucila",
    "roles": [
     "ux_designer"
    ],
@@ -1867,15 +1855,27 @@
    "titulo": ""
   },
   {
-   "id": "sergio",
-   "nombre": "Sergio Bertolez",
+   "id": "enzo",
+   "nombre": "Varela, Enzo",
    "roles": [
-    "it_manager"
+    "ceo",
+    "sales_manager"
    ],
-   "nivel": null,
-   "modalidad": "Externo",
-   "loc": "Freelance",
-   "titulo": "Anal. Sist."
+   "nivel": "LÍDER",
+   "modalidad": "Socio fundador",
+   "loc": "Villa del Rosario",
+   "titulo": "Mgter. Lic. Analista de Sistemas"
+  },
+  {
+   "id": "vincenti",
+   "nombre": "Vincenti, Marina Elizabeth",
+   "roles": [
+    "pm"
+   ],
+   "nivel": "SEMI SENIOR",
+   "modalidad": "Externo · remoto",
+   "loc": "pendiente",
+   "titulo": ""
   }
  ],
  "offsets": {},
