@@ -1,5 +1,5 @@
 {
- "savedAt": 1788732636389,
+ "savedAt": 1788737922979,
  "meta": {
   "mode": "nominal",
   "version": "v1.8 — estructura 2026 validada · fichas en borrador",
@@ -1257,9 +1257,12 @@
     "dev_fullstack"
    ],
    "nivel": "SENIOR",
-   "modalidad": "Relación de dependencia · remoto",
+   "modalidad": "Relación de Dependencia · Remoto",
    "loc": "Villa María",
-   "titulo": ""
+   "titulo": "",
+   "tel": "353-7669593",
+   "mail": "aabba@goodapps.com.ar",
+   "ingreso": "01/06/2025"
   },
   {
    "id": "lalen",
@@ -1268,9 +1271,12 @@
     "ux_designer"
    ],
    "nivel": "JUNIOR",
-   "modalidad": "A prueba · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "A prueba · Remoto",
+   "loc": "CABA",
+   "titulo": "",
+   "tel": "11-44952002",
+   "mail": "lalen@goodapps.com.ar",
+   "ingreso": "24/08/2026"
   },
   {
    "id": "pablo",
@@ -1279,9 +1285,12 @@
     "dev_backend"
    ],
    "nivel": "SENIOR I",
-   "modalidad": "Relación de dependencia · presencial",
+   "modalidad": "Relación de Dependencia · Presencial",
    "loc": "Villa del Rosario",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3573-438812",
+   "mail": "palgarra@goodapps.com.ar",
+   "ingreso": "07/02/2023"
   },
   {
    "id": "estefania",
@@ -1291,10 +1300,12 @@
     "design_manager"
    ],
    "nivel": "LÍDER",
-   "modalidad": "Relación de dependencia · socia/directora",
+   "modalidad": "Relación de Dependencia · Socia/Directora",
    "loc": "Villa del Rosario",
    "titulo": "Tec. Sup. Diseño Gráfico y Publicitario",
-   "tel": "3573 - 495356"
+   "tel": "3573-434372",
+   "mail": "ealloco@goodapps.com.ar",
+   "ingreso": "01/10/2017"
   },
   {
    "id": "leonardo",
@@ -1304,9 +1315,12 @@
     "po"
    ],
    "nivel": "SENIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "Córdoba",
-   "titulo": "Mgter. Ing. · Analista funcional"
+   "modalidad": "Externo · Remoto",
+   "loc": "Córdoba Capital",
+   "titulo": "Mgter. Ing. · Analista funcional",
+   "tel": "351-6102933",
+   "mail": "laratano@goodapps.com.ar",
+   "ingreso": "01/07/2022"
   },
   {
    "id": "valentina",
@@ -1315,9 +1329,12 @@
     "ux_designer"
    ],
    "nivel": "SENIOR I",
-   "modalidad": "Relación de dependencia · remoto",
-   "loc": "Córdoba",
-   "titulo": "Lic. Diseño Gráfico"
+   "modalidad": "Relación de Dependencia · Remoto",
+   "loc": "Córdoba Capital",
+   "titulo": "Lic. Diseño Gráfico",
+   "tel": "351-2004721",
+   "mail": "varatano@goodapps.com.ar",
+   "ingreso": "22/05/2023"
   },
   {
    "id": "brian",
@@ -1326,9 +1343,12 @@
     "dev_backend"
    ],
    "nivel": "SENIOR",
-   "modalidad": "Relación de dependencia · presencial",
+   "modalidad": "Relación de Dependencia · Presencial",
    "loc": "Villa del Rosario",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3573-435118",
+   "mail": "barce@goodapps.com.ar",
+   "ingreso": "01/12/2020"
   },
   {
    "id": "matias",
@@ -1337,9 +1357,12 @@
     "dev_backend"
    ],
    "nivel": "JUNIOR",
-   "modalidad": "Relación de dependencia · remoto",
+   "modalidad": "Relación de Dependencia · Remoto",
    "loc": "Río Segundo",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3572-596225",
+   "mail": "mbertino@goodapps.com.ar",
+   "ingreso": "25/02/2025"
   },
   {
    "id": "paulo",
@@ -1348,9 +1371,12 @@
     "dev_backend"
    ],
    "nivel": "SEMI SENIOR",
-   "modalidad": "Relación de dependencia · remoto",
+   "modalidad": "Relación de Dependencia · Remoto",
    "loc": "Río Segundo",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3572-525589",
+   "mail": "pbertino@goodapps.com.ar",
+   "ingreso": "26/02/2024"
   },
   {
    "id": "sergio",
@@ -1360,8 +1386,11 @@
    ],
    "nivel": null,
    "modalidad": "Externo",
-   "loc": "Freelance",
-   "titulo": "Anal. Sist."
+   "loc": "Villa del Rosario",
+   "titulo": "Anal. Sist.",
+   "tel": "3573-496292",
+   "mail": "sbertolez@goodapps.com.ar",
+   "ingreso": "01/01/2019"
   },
   {
    "id": "juanignacio",
@@ -1370,9 +1399,12 @@
     "dev_frontend"
    ],
    "nivel": "PASANTE JUNIOR",
-   "modalidad": "Pasantía rentada",
+   "modalidad": "Pasantía Rentada",
    "loc": "Villa del Rosario",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3573-432111",
+   "mail": "jbertossi@goodapps.com.ar",
+   "ingreso": "23/06/2025"
   },
   {
    "id": "mbordon",
@@ -1381,9 +1413,12 @@
     "dev_frontend"
    ],
    "nivel": "JUNIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Externo · Remoto",
+   "loc": "La Rioja Capital",
+   "titulo": "",
+   "tel": "3804-795097",
+   "mail": "mbordon@goodapps.com.ar",
+   "ingreso": "02/02/2026"
   },
   {
    "id": "mborsini",
@@ -1392,9 +1427,12 @@
     "dev_backend"
    ],
    "nivel": "PASANTE",
-   "modalidad": "Pasantía no rentada",
+   "modalidad": "Pasantía No Rentada",
    "loc": "Villa del Rosario",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3573-402501",
+   "mail": "matias2010borsini@gmail.com",
+   "ingreso": "01/06/2026"
   },
   {
    "id": "bria",
@@ -1403,9 +1441,12 @@
     "idi_lead"
    ],
    "nivel": "SENIOR III",
-   "modalidad": "Relación de dependencia · presencial",
+   "modalidad": "Relación de Dependencia · Presencial",
    "loc": "Villa del Rosario",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3573-413488",
+   "mail": "ebria@goodapps.com.ar",
+   "ingreso": "01/06/2016"
   },
   {
    "id": "luciano",
@@ -1414,9 +1455,12 @@
     "dev_frontend"
    ],
    "nivel": "SENIOR",
-   "modalidad": "Relación de dependencia · presencial",
+   "modalidad": "Relación de Dependencia · Presencial",
    "loc": "Villa del Rosario",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3573-499584",
+   "mail": "lbruno@goodapps.com.ar",
+   "ingreso": "01/12/2023"
   },
   {
    "id": "santiagob",
@@ -1426,9 +1470,12 @@
     "dev_backend"
    ],
    "nivel": "SENIOR II",
-   "modalidad": "Relación de dependencia · presencial",
+   "modalidad": "Relación de Dependencia · Presencial",
    "loc": "Villa del Rosario",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3573-451837",
+   "mail": "sbruno@goodapps.com.ar",
+   "ingreso": "01/12/2023"
   },
   {
    "id": "abustos",
@@ -1437,9 +1484,12 @@
     "dev_backend"
    ],
    "nivel": "JUNIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Externo · Remoto",
+   "loc": "Rosario",
+   "titulo": "",
+   "tel": "3413-753729",
+   "mail": "abustos@goodapps.com.ar",
+   "ingreso": "06/11/2025"
   },
   {
    "id": "lcampos",
@@ -1448,9 +1498,12 @@
     "po"
    ],
    "nivel": "SEMI SENIOR",
-   "modalidad": "Relación de dependencia · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Relación de Dependencia · Remoto",
+   "loc": "Santa Fe Capital",
+   "titulo": "",
+   "tel": "3434-614230",
+   "mail": "lcampos@goodapps.com.ar",
+   "ingreso": "05/01/2026"
   },
   {
    "id": "mcarle",
@@ -1460,8 +1513,11 @@
    ],
    "nivel": null,
    "modalidad": "Externo",
-   "loc": "pendiente",
-   "titulo": ""
+   "loc": "Villa del Rosario",
+   "titulo": "",
+   "tel": "3573 46-8100",
+   "mail": "rrpp@goodapps.com.ar",
+   "ingreso": "01/10/2025"
   },
   {
    "id": "ycarrizo",
@@ -1470,9 +1526,12 @@
     "qa_analyst"
    ],
    "nivel": "SEMI SENIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Externo · Remoto",
+   "loc": "Córdoba Capital",
+   "titulo": "",
+   "tel": "3812-143103",
+   "mail": "mcarrizo@goodapps.com.ar",
+   "ingreso": "05/01/2026"
   },
   {
    "id": "acontreras",
@@ -1481,9 +1540,12 @@
     "ai_dev"
    ],
    "nivel": "JUNIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Externo · Remoto",
+   "loc": "CABA",
+   "titulo": "",
+   "tel": "11-62663644",
+   "mail": "acontreras@goodapps.com.ar",
+   "ingreso": "02/03/2026"
   },
   {
    "id": "bruno",
@@ -1492,9 +1554,12 @@
     "dev_frontend"
    ],
    "nivel": "SEMI SENIOR",
-   "modalidad": "Relación de dependencia · presencial",
-   "loc": "Villa del Rosario",
-   "titulo": ""
+   "modalidad": "Relación de Dependencia · Presencial",
+   "loc": "Matorrales",
+   "titulo": "",
+   "tel": "3572-445819",
+   "mail": "bcravero@goodapps.com.ar",
+   "ingreso": "01/12/2023"
   },
   {
    "id": "ludmila",
@@ -1503,9 +1568,12 @@
     "content_manager"
    ],
    "nivel": "JUNIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Externo · Remoto",
+   "loc": "Córdoba Capital",
+   "titulo": "",
+   "tel": "3573-402517",
+   "mail": "lcuassolo@goodapps.com.ar",
+   "ingreso": "10/11/2025"
   },
   {
    "id": "bautista",
@@ -1514,9 +1582,12 @@
     "dev_backend"
    ],
    "nivel": "PASANTE JUNIOR",
-   "modalidad": "Pasantía rentada",
+   "modalidad": "Pasantía Rentada",
    "loc": "Villa del Rosario",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3573-450940",
+   "mail": "bdefago@goodapps.com.ar",
+   "ingreso": "03/04/2025"
   },
   {
    "id": "dettori",
@@ -1525,9 +1596,12 @@
     "po"
    ],
    "nivel": "JUNIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": "Analista funcional"
+   "modalidad": "Externo · Remoto",
+   "loc": "Córdoba Capital",
+   "titulo": "Analista funcional",
+   "tel": "2804-386119",
+   "mail": "sdettori@goodapps.com.ar",
+   "ingreso": "23/02/2026"
   },
   {
    "id": "rdipierri",
@@ -1536,9 +1610,12 @@
     "dev_backend"
    ],
    "nivel": "SEMI SENIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Externo · Remoto",
+   "loc": "Trujui - Moreno Buenos Aires",
+   "titulo": "",
+   "tel": "11-30316296",
+   "mail": "rdipierri@goodapps.com.ar",
+   "ingreso": "29/06/2026"
   },
   {
    "id": "ufarias",
@@ -1547,9 +1624,12 @@
     "dev_backend"
    ],
    "nivel": "SEMI SENIOR",
-   "modalidad": "Relación de dependencia · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Relación de Dependencia · Remoto",
+   "loc": "Córdoba Capital",
+   "titulo": "",
+   "tel": "11-62451920",
+   "mail": "ufarias@goodapps.com.ar",
+   "ingreso": "04/05/2026"
   },
   {
    "id": "afernandez",
@@ -1558,9 +1638,12 @@
     "ai_dev"
    ],
    "nivel": "JUNIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Externo · Remoto",
+   "loc": "Córdoba Capital",
+   "titulo": "",
+   "tel": "2974-049438",
+   "mail": "afernandez@goodapps.com.ar",
+   "ingreso": "17/11/2025"
   },
   {
    "id": "enzogaido",
@@ -1569,9 +1652,12 @@
     "dev_backend"
    ],
    "nivel": "PASANTE JUNIOR",
-   "modalidad": "Pasantía rentada",
+   "modalidad": "Pasantía Rentada",
    "loc": "Villa del Rosario",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3573-442707",
+   "mail": "egaido@goodapps.com.ar",
+   "ingreso": "04/09/2025"
   },
   {
    "id": "sgarofalo",
@@ -1580,9 +1666,12 @@
     "ux_designer"
    ],
    "nivel": "SENIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Relación de Dependencia · Remoto",
+   "loc": "Hudson - Buenos Aires",
+   "titulo": "",
+   "tel": "11-30682207",
+   "mail": "sgarofalo@goodapps.com.ar",
+   "ingreso": "16/03/2026"
   },
   {
    "id": "lorena",
@@ -1591,10 +1680,12 @@
     "hr_manager"
    ],
    "nivel": "LÍDER",
-   "modalidad": "Relación de dependencia · híbrida",
-   "loc": "Córdoba Capital",
+   "modalidad": "Externo · Híbrida",
+   "loc": "La Calera",
    "titulo": "Lic. — Gerente de Gestión del Talento",
-   "ingreso": "07/09/2026"
+   "ingreso": "07/09/2026",
+   "tel": "351-5334531",
+   "mail": "lgarrido@goodapps.com.ar"
   },
   {
    "id": "romina",
@@ -1603,9 +1694,12 @@
     "pm"
    ],
    "nivel": "SENIOR",
-   "modalidad": "Relación de dependencia · remoto",
-   "loc": "pendiente",
-   "titulo": "Ing. en Sistemas de la Información · Referente del área"
+   "modalidad": "Relación de Dependencia · Remoto",
+   "loc": "Villa Allende",
+   "titulo": "Ing. en Sistemas de la Información · Referente del área",
+   "tel": "351-5591348",
+   "mail": "rgiaveno@goodapps.com.ar",
+   "ingreso": "01/10/2025"
   },
   {
    "id": "mauricio",
@@ -1615,9 +1709,12 @@
     "dev_frontend"
    ],
    "nivel": "SENIOR II",
-   "modalidad": "Relación de dependencia · presencial",
+   "modalidad": "Relación de Dependencia · Presencial",
    "loc": "Villa del Rosario",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3573-451560",
+   "mail": "mhongn@goodapps.com.ar",
+   "ingreso": "01/12/2023"
   },
   {
    "id": "vjuarez",
@@ -1626,9 +1723,12 @@
     "dev_frontend"
    ],
    "nivel": "JUNIOR",
-   "modalidad": "Relación de dependencia",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Relación de Dependencia · Presencial",
+   "loc": "Villa del Rosario",
+   "titulo": "",
+   "tel": "3573-445156",
+   "mail": "vjuarez@goodapps.com.ar",
+   "ingreso": "14/01/2026"
   },
   {
    "id": "laralopez",
@@ -1637,9 +1737,12 @@
     "dev_frontend"
    ],
    "nivel": "PASANTE",
-   "modalidad": "Pasantía no rentada",
+   "modalidad": "Pasantía No Rentada",
    "loc": "Villa del Rosario",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3573-495822",
+   "mail": "larslopez20@gmail.com",
+   "ingreso": "01/06/2026"
   },
   {
    "id": "llopez",
@@ -1648,9 +1751,12 @@
     "sales_gm"
    ],
    "nivel": "LÍDER",
-   "modalidad": "Relación de dependencia · híbrido/remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Externo · Híbrido",
+   "loc": "Villa María",
+   "titulo": "",
+   "tel": "353-4091784",
+   "mail": "comercial@goodapps.com.ar",
+   "ingreso": "01/04/2026"
   },
   {
    "id": "carina",
@@ -1659,9 +1765,12 @@
     "maint_assistant"
    ],
    "nivel": null,
-   "modalidad": "Externo",
+   "modalidad": "Externo · Presencial",
    "loc": "Villa del Rosario",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3573-402614",
+   "mail": "Carivalle74@gmail.com",
+   "ingreso": "01/05/2022"
   },
   {
    "id": "santiagof",
@@ -1670,9 +1779,12 @@
     "dev_fullstack"
    ],
    "nivel": "SENIOR",
-   "modalidad": "Relación de dependencia · presencial",
+   "modalidad": "Relación de Dependencia · Presencial",
    "loc": "Villa del Rosario",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3573-451802",
+   "mail": "sfessia@goodapps.com.ar",
+   "ingreso": "01/12/2020"
   },
   {
    "id": "rocio",
@@ -1681,9 +1793,12 @@
     "support"
    ],
    "nivel": "JUNIOR",
-   "modalidad": "Relación de dependencia",
+   "modalidad": "Relación de Dependencia · Presencial",
    "loc": "Villa del Rosario",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3573-450062",
+   "mail": "soporte@goodapps.com.ar",
+   "ingreso": "01/01/2026"
   },
   {
    "id": "jmartinez",
@@ -1692,9 +1807,12 @@
     "dev_backend"
    ],
    "nivel": "SEMI SENIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Externo · Remoto",
+   "loc": "Oliva",
+   "titulo": "",
+   "tel": "3532-402845",
+   "mail": "jmartinez@goodapps.com.ar",
+   "ingreso": "01/04/2026"
   },
   {
    "id": "massucco",
@@ -1704,9 +1822,12 @@
     "po"
    ],
    "nivel": "SENIOR",
-   "modalidad": "Relación de dependencia · remoto/híbrido",
-   "loc": "pendiente",
-   "titulo": "Contador · Analista funcional"
+   "modalidad": "Externo · Híbrido",
+   "loc": "Villa María",
+   "titulo": "Contador · Analista funcional",
+   "tel": "353-7446412",
+   "mail": "amassucco@goodapps.com.ar",
+   "ingreso": "01/07/2026"
   },
   {
    "id": "imonton",
@@ -1715,9 +1836,12 @@
     "qa_analyst"
    ],
    "nivel": "JUNIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Externo · Remoto",
+   "loc": "Mendiolaza",
+   "titulo": "",
+   "tel": "3518-037573",
+   "mail": "imonton@goodapps.com.ar",
+   "ingreso": "02/02/2026"
   },
   {
    "id": "emanuelp",
@@ -1726,9 +1850,12 @@
     "dev_backend"
    ],
    "nivel": "PASANTE JUNIOR",
-   "modalidad": "Pasantía rentada",
+   "modalidad": "Pasantía Rentada",
    "loc": "Pilar",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3572-606288",
+   "mail": "epaz@goodapps.com.ar",
+   "ingreso": "13/05/2025"
   },
   {
    "id": "gabriel",
@@ -1738,9 +1865,12 @@
     "po"
    ],
    "nivel": "SENIOR II",
-   "modalidad": "Relación de dependencia · presencial",
+   "modalidad": "Relación de Dependencia · Presencial",
    "loc": "Villa del Rosario",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3573-436586",
+   "mail": "gperrotti@goodapps.com.ar",
+   "ingreso": "01/11/2019"
   },
   {
    "id": "julian",
@@ -1749,9 +1879,12 @@
     "cto"
    ],
    "nivel": "LÍDER",
-   "modalidad": "Relación de dependencia · socio/director",
+   "modalidad": "Relación de Dependencia · Socio/Director",
    "loc": "Villa del Rosario",
-   "titulo": "Tec. Sup. Desarrollo de Software"
+   "titulo": "Tec. Sup. Desarrollo de Software",
+   "tel": "3573-458107",
+   "mail": "jracca@goodapps.com.ar",
+   "ingreso": "01/11/2017"
   },
   {
    "id": "mraisberg",
@@ -1760,9 +1893,12 @@
     "dev_fullstack"
    ],
    "nivel": "JUNIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Externo · Remoto",
+   "loc": "Villa Devoto – CABA",
+   "titulo": "",
+   "tel": "11-39469666",
+   "mail": "mraisberg@goodapps.com.ar",
+   "ingreso": "05/05/2026"
   },
   {
    "id": "arivalta",
@@ -1771,9 +1907,12 @@
     "dev_frontend"
    ],
    "nivel": "PASANTE JUNIOR",
-   "modalidad": "Pasantía rentada",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Pasantía Rentada",
+   "loc": "Villa del Rosario",
+   "titulo": "",
+   "tel": "3573-499196",
+   "mail": "arivalta@goodapps.com.ar",
+   "ingreso": "29/10/2025"
   },
   {
    "id": "erobledo",
@@ -1782,9 +1921,12 @@
     "account_exec"
    ],
    "nivel": "SEMI SENIOR",
-   "modalidad": "Relación de dependencia · presencial",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Externo · Remoto",
+   "loc": "Córdoba Capital",
+   "titulo": "",
+   "tel": "351-2084312",
+   "mail": "erobledo@goodapps.com.ar",
+   "ingreso": "29/07/2026"
   },
   {
    "id": "frodriguez",
@@ -1793,9 +1935,12 @@
     "ai_dev"
    ],
    "nivel": "JUNIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Externo · Remoto",
+   "loc": "Morón - Buenos Aires",
+   "titulo": "",
+   "tel": "11-37997854",
+   "mail": "frodriguez@goodapps.com.ar",
+   "ingreso": "22/03/2026"
   },
   {
    "id": "laura",
@@ -1806,9 +1951,12 @@
     "hr_assistant"
    ],
    "nivel": "LÍDER",
-   "modalidad": "Relación de dependencia · presencial",
+   "modalidad": "Relación de Dependencia · Híbrido",
    "loc": "Villa del Rosario",
-   "titulo": "Líder de Administración General / Calidad / Gestión del Talento (secundario)"
+   "titulo": "Líder de Administración General / Calidad / Gestión del Talento (secundario)",
+   "tel": "3572-587289",
+   "mail": "administracion@goodapps.com.ar",
+   "ingreso": "08/02/2023"
   },
   {
    "id": "rroman",
@@ -1817,9 +1965,12 @@
     "dev_backend"
    ],
    "nivel": "SEMI SENIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Externo · Remoto",
+   "loc": "Corrientes - Corrientes",
+   "titulo": "",
+   "tel": "3794-546953",
+   "mail": "rroman@goodapps.com.ar",
+   "ingreso": "17/03/2026"
   },
   {
    "id": "jroschge",
@@ -1828,9 +1979,12 @@
     "dev_backend"
    ],
    "nivel": "JUNIOR",
-   "modalidad": "Relación de dependencia · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Relación de Dependencia · Remoto",
+   "loc": "Córdoba Capital",
+   "titulo": "",
+   "tel": "351-7144125",
+   "mail": "jroschge@goodapps.com.ar",
+   "ingreso": "01/06/2026"
   },
   {
    "id": "francos",
@@ -1839,9 +1993,12 @@
     "dev_frontend"
    ],
    "nivel": "SENIOR",
-   "modalidad": "Relación de dependencia · presencial",
+   "modalidad": "Relación de Dependencia · Presencial",
    "loc": "Villa del Rosario",
-   "titulo": ""
+   "titulo": "",
+   "tel": "3574-431248",
+   "mail": "fsanchez@goodapps.com.ar",
+   "ingreso": "19/02/2024"
   },
   {
    "id": "msayas",
@@ -1850,9 +2007,12 @@
     "dev_frontend"
    ],
    "nivel": "SEMI SENIOR",
-   "modalidad": "Relación de dependencia · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Relación de Dependencia · Remoto",
+   "loc": "Córdoba Capital",
+   "titulo": "",
+   "tel": "351-6816302",
+   "mail": "msayas@goodapps.com.ar",
+   "ingreso": "25/03/2026"
   },
   {
    "id": "ntoconas",
@@ -1861,9 +2021,12 @@
     "dev_frontend"
    ],
    "nivel": "SEMI SENIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Externo · Remoto",
+   "loc": "Esquel - Chubut",
+   "titulo": "",
+   "tel": "11-59628216",
+   "mail": "ntoconas@goodapps.com.ar",
+   "ingreso": "01/06/2026"
   },
   {
    "id": "mvaras",
@@ -1872,9 +2035,12 @@
     "ux_designer"
    ],
    "nivel": "PASANTE",
-   "modalidad": "Pasantía no rentada",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Pasantía No Rentada",
+   "loc": "Villa del Rosario",
+   "titulo": "",
+   "tel": "3573-432244",
+   "mail": "melanivarasvdr@gmail.com",
+   "ingreso": "31/08/2026"
   },
   {
    "id": "enzo",
@@ -1884,9 +2050,12 @@
     "sales_manager"
    ],
    "nivel": "LÍDER",
-   "modalidad": "Socio fundador",
+   "modalidad": "Relación de Dependencia · Socio Fundador/Director",
    "loc": "Villa del Rosario",
-   "titulo": "Mgter. Lic. Analista de Sistemas"
+   "titulo": "Mgter. Lic. Analista de Sistemas",
+   "tel": "3573-495356",
+   "mail": "evarela@goodapps.com.ar",
+   "ingreso": "01/01/2016"
   },
   {
    "id": "vincenti",
@@ -1895,9 +2064,12 @@
     "pm"
    ],
    "nivel": "SEMI SENIOR",
-   "modalidad": "Externo · remoto",
-   "loc": "pendiente",
-   "titulo": ""
+   "modalidad": "Externo · Remoto",
+   "loc": "Córdoba Capital",
+   "titulo": "",
+   "tel": "351-2517923",
+   "mail": "mvincenti@goodapps.com.ar",
+   "ingreso": "13/07/2026"
   }
  ],
  "offsets": {},
