@@ -1,5 +1,5 @@
 {
- "savedAt": 1788314468163,
+ "savedAt": 1788732636389,
  "meta": {
   "mode": "nominal",
   "version": "v1.8 — estructura 2026 validada · fichas en borrador",
@@ -1386,6 +1386,17 @@
    "titulo": ""
   },
   {
+   "id": "mborsini",
+   "nombre": "Borsini, Matías Hernan",
+   "roles": [
+    "dev_backend"
+   ],
+   "nivel": "PASANTE",
+   "modalidad": "Pasantía no rentada",
+   "loc": "Villa del Rosario",
+   "titulo": ""
+  },
+  {
    "id": "bria",
    "nombre": "Bría, Emmanuel Augusto",
    "roles": [
@@ -1617,6 +1628,17 @@
    "nivel": "JUNIOR",
    "modalidad": "Relación de dependencia",
    "loc": "pendiente",
+   "titulo": ""
+  },
+  {
+   "id": "laralopez",
+   "nombre": "López, Lara",
+   "roles": [
+    "dev_frontend"
+   ],
+   "nivel": "PASANTE",
+   "modalidad": "Pasantía no rentada",
+   "loc": "Villa del Rosario",
    "titulo": ""
   },
   {
