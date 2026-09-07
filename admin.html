@@ -393,20 +393,20 @@ button{cursor:pointer;background:none;border:0;padding:0}
     const guardar = async () => {
       if (!isStatic && artifactCap) { try { say("Guardando…"); await artifactCap.publish(buildHtml(snapshot())); dispatch({ type: "clean" }); say("Guardado en el artefacto"); } catch (e) { say(e && e.code === "conflict" ? "Otra persona guardó antes; recargá" : "No se pudo guardar"); } return; }
       lsWrite(snapshot()); dispatch({ type: "clean" });
-      if (ghToken) {
-        say("Publicando en el repositorio…");
-        try {
-          const msg = "Datos actualizados desde Administración";
-          await ghPut(ghRepo, "main", ghToken, "goodapps-org-data.json", b64utf8(JSON.stringify(orgState("anon"), null, 1)), msg);
-          await ghPut(ghRepo, "main", ghToken, "goodapps-org-data-nominal.json", b64utf8(JSON.stringify(orgState("nominal"), null, 1)), msg);
-          await ghPut(ghRepo, "main", ghToken, "goodapps-people-data.json", b64utf8(JSON.stringify(peopleState(), null, 1)), msg);
-          await ghPut(ghRepo, "main", ghToken, "goodapps-access.json", b64utf8(JSON.stringify(accessState(), null, 1)), msg);
-          say("Publicado en el repositorio. Todas las vistas se actualizan solas en ~1 minuto");
-          return;
-        } catch (e) { say("No se pudo publicar en GitHub (" + (e && e.message) + "). Se descargan los JSON como respaldo"); }
+      if (!ghToken) {
+        dispatch({ type: "tab", tab: "config" });
+        say("Los cambios quedaron guardados en este navegador. Para publicarlos en el repositorio, conectá GitHub acá abajo (token) y volvé a tocar Guardar");
+        return;
       }
-      await descargarTodo();
-      say(ghToken ? "JSONs descargados como respaldo" : "Guardado. Se descargaron los 4 JSON: subilos a la raíz del repositorio (o conectá GitHub en la pestaña Accesos para publicar con un clic)");
+      say("Publicando en el repositorio…");
+      try {
+        const msg = "Datos actualizados desde Administración";
+        await ghPut(ghRepo, "main", ghToken, "goodapps-org-data.json", b64utf8(JSON.stringify(orgState("anon"), null, 1)), msg);
+        await ghPut(ghRepo, "main", ghToken, "goodapps-org-data-nominal.json", b64utf8(JSON.stringify(orgState("nominal"), null, 1)), msg);
+        await ghPut(ghRepo, "main", ghToken, "goodapps-people-data.json", b64utf8(JSON.stringify(peopleState(), null, 1)), msg);
+        await ghPut(ghRepo, "main", ghToken, "goodapps-access.json", b64utf8(JSON.stringify(accessState(), null, 1)), msg);
+        say("Publicado: se modificaron los JSON del repositorio. Las vistas se actualizan solas en ~1 minuto");
+      } catch (e) { say("No se pudo publicar en GitHub (" + (e && e.message) + "). Revisá el token en Accesos y volvé a intentar; los cambios siguen guardados en este navegador"); }
     };
     const subirFoto = async file => {
       if (!file || !selP) return;
