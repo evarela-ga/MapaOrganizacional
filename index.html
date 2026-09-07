@@ -244,23 +244,27 @@ button{cursor:pointer;background:none;border:0;padding:0}
     return { email, ia: u.ia !== false, vistas: u.vistas || [] };
   }
 
-  window.__gate = function () {
+  function gateRun() {
     return new Promise(function (resolve) {
       if (!isStatic) { resolve(null); return; }
       (async function () {
         let cfg = null;
         try { const r = await fetch("goodapps-access.json", { cache: "no-store" }); if (r.ok) cfg = await r.json(); } catch (e) {}
-        if (!cfg || !cfg.clientId || !/[.]apps[.]googleusercontent[.]com$/.test(cfg.clientId) || !(cfg.users || []).length) { resolve(null); return; }
+        if (!cfg || !(cfg.users || []).length) { resolve(null); return; }
         try {
-          const s = JSON.parse(sessionStorage.getItem("ga-user") || "null");
+          const s = JSON.parse(localStorage.getItem("ga-user") || "null");
           if (s && s.exp > Date.now()) { const u = match(cfg, s.email); if (u && !u.deny) { window.GA_USER = u; resolve(u); return; } }
         } catch (e) {}
         overlay(cfg, resolve);
       })();
     });
-  };
+  }
+  const arranque = function () { window.__gateP = gateRun(); };
+  if (document.body) arranque(); else document.addEventListener("DOMContentLoaded", arranque);
+  window.__gate = function () { return window.__gateP || gateRun(); };
 
   function overlay(cfg, resolve) {
+    const conGoogle = cfg.clientId && /[.]apps[.]googleusercontent[.]com$/.test(String(cfg.clientId).trim());
     const ov = document.createElement("div");
     ov.id = "ga-gate";
     ov.setAttribute("style", "position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#0A2A3B;font-family:'DM Sans','Inter',Arial,sans-serif;color:#fff;text-align:center;padding:24px;");
@@ -268,12 +272,29 @@ button{cursor:pointer;background:none;border:0;padding:0}
     ov.innerHTML = '<div style="max-width:420px;width:100%">' +
       (logo ? '<img src="' + logo.textContent.trim() + '" alt="GoodApps" style="height:36px;margin-bottom:18px">' : "") +
       '<div style="height:5px;width:120px;margin:0 auto 22px;border-radius:3px;background:linear-gradient(90deg,#F7911E,#65EAA4)"></div>' +
-      '<h1 style="margin:0 0 6px;font-size:22px;font-weight:700">Acceso restringido</h1>' +
+      '<h1 style="margin:0 0 6px;font-size:22px;font-weight:700">Mapa Organizacional GoodApps</h1>' +
       '<p style="margin:0 0 22px;color:#ADBDC6;font-size:14px;line-height:1.5">' + (VIEW_NAMES[VIEW] || VIEW) + " · solo cuentas corporativas @" + (cfg.domain || "goodapps.com.ar") + "</p>" +
       '<div id="ga-btn" style="display:flex;justify-content:center"></div>' +
       '<p id="ga-msg" style="margin:18px 0 0;color:#F7911E;font-weight:600;font-size:13.5px;min-height:20px"></p></div>';
     document.body.appendChild(ov);
     const msg = t => { const el = document.getElementById("ga-msg"); if (el) el.textContent = t; };
+    const entrar = u => { try { localStorage.setItem("ga-user", JSON.stringify({ email: u.email, exp: Date.now() + 8 * 3600 * 1000 })); } catch (e) {} window.GA_USER = u; ov.remove(); resolve(u); };
+    const validar = email => {
+      const u = match(cfg, email);
+      if (!u || u.deny === "dominio") { msg("Solo se permiten cuentas @" + cfg.domain + "."); return; }
+      if (u.deny === "lista") { msg("La cuenta " + email + " no está autorizada. Pedile acceso a Dirección o Gestión del Talento."); return; }
+      if (u.deny === "vista") { msg("Tu cuenta no tiene acceso a esta vista. Tenés acceso a: " + (u.vistas || []).map(v => VIEW_NAMES[v] || v).join(", ") + "."); return; }
+      entrar(u);
+    };
+    if (!conGoogle) {
+      const box = document.getElementById("ga-btn");
+      box.innerHTML = '<form id="ga-form" style="display:flex;gap:8px;width:100%;max-width:360px;margin:0 auto">' +
+        '<input id="ga-mail" type="email" required placeholder="nombre@' + (cfg.domain || "goodapps.com.ar") + '" style="flex:1;min-width:0;padding:11px 14px;border-radius:999px;border:1px solid #496C7F;background:#0F3E57;color:#fff;font:inherit;font-size:14px">' +
+        '<button type="submit" style="padding:0 18px;border:0;border-radius:999px;background:#F7911E;color:#0F3E57;font:inherit;font-weight:700;cursor:pointer">Ingresar</button></form>';
+      document.getElementById("ga-form").addEventListener("submit", function (e) { e.preventDefault(); validar(document.getElementById("ga-mail").value); });
+      setTimeout(function () { const i = document.getElementById("ga-mail"); if (i) i.focus(); }, 50);
+      return;
+    }
     const s = document.createElement("script");
     s.src = "https://accounts.google.com/gsi/client"; s.async = true;
     s.onerror = function () { msg("No se pudo cargar Google Sign-In. Revisá la conexión y recargá."); };
@@ -289,7 +310,7 @@ button{cursor:pointer;background:none;border:0;padding:0}
               if (!u || u.deny === "dominio") { msg("Solo se permiten cuentas @" + cfg.domain + ". Ingresaste con " + payload.email + "."); return; }
               if (u.deny === "lista") { msg("La cuenta " + payload.email + " no está autorizada. Pedile acceso a Dirección o Gestión del Talento."); return; }
               if (u.deny === "vista") { msg("Tu cuenta no tiene acceso a esta vista. Tenés acceso a: " + (u.vistas || []).map(v => VIEW_NAMES[v] || v).join(", ") + "."); return; }
-              try { sessionStorage.setItem("ga-user", JSON.stringify({ email: u.email, exp: Date.now() + 8 * 3600 * 1000 })); } catch (e) {}
+              try { localStorage.setItem("ga-user", JSON.stringify({ email: u.email, exp: Date.now() + 8 * 3600 * 1000 })); } catch (e) {}
               window.GA_USER = u;
               ov.remove();
               resolve(u);
