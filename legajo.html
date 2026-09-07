@@ -181,12 +181,48 @@ button{cursor:pointer;background:none;border:0;padding:0}
         if (!cfg || !(cfg.users || []).length) { resolve(null); return; }
         try {
           const s = JSON.parse(localStorage.getItem("ga-user") || "null");
-          if (s && s.exp > Date.now()) { const u = match(cfg, s.email); if (u && !u.deny) { window.GA_USER = u; resolve(u); return; } }
+          if (s && s.exp > Date.now()) { const u = match(cfg, s.email); if (u && !u.deny) { u.name = s.name || ""; u.pic = s.pic || ""; listo(u, resolve); return; } }
         } catch (e) {}
         overlay(cfg, resolve);
       })();
     });
   }
+  function esc(t) { return String(t || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+
+  window.gaLogout = function () {
+    try { localStorage.removeItem("ga-user"); } catch (e) {}
+    try { if (window.google && google.accounts && google.accounts.id) google.accounts.id.disableAutoSelect(); } catch (e) {}
+    location.reload();
+  };
+
+  function listo(u, resolve) { window.GA_USER = u; montarChip(u); resolve(u); }
+
+  function montarChip(u) {
+    if (!isStatic) return;
+    const poner = function () {
+      if (document.getElementById("ga-chip")) return true;
+      const bar = document.querySelector("header.topbar, .toolbar");
+      if (!bar) return false;
+      const d = document.createElement("div");
+      d.id = "ga-chip";
+      d.setAttribute("style", "display:flex;align-items:center;gap:7px;margin-left:6px;padding:3px 5px 3px 4px;border:1px solid rgba(125,145,155,.45);border-radius:999px;font-family:inherit;flex:0 0 auto");
+      d.title = u.email;
+      const nom = u.name || u.email.split("@")[0];
+      const av = u.pic
+        ? '<img src="' + esc(u.pic) + '" alt="" referrerpolicy="no-referrer" style="width:26px;height:26px;border-radius:50%;display:block">'
+        : '<span style="width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#F7911E,#65EAA4);color:#0F3E57;font-weight:700;font-size:13px">' + esc(nom.charAt(0).toUpperCase()) + "</span>";
+      d.innerHTML = av +
+        '<span style="font-size:12.5px;font-weight:600;max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:inherit">' + esc(nom) + "</span>" +
+        '<button id="ga-out" type="button" aria-label="Cerrar sesión" title="Cerrar sesión (' + esc(u.email) + ')" style="display:grid;place-items:center;width:26px;height:26px;border:0;border-radius:50%;background:transparent;color:inherit;cursor:pointer;padding:0;opacity:.85">' +
+        '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></button>';
+      bar.appendChild(d);
+      d.querySelector("#ga-out").addEventListener("click", window.gaLogout);
+      return true;
+    };
+    if (!poner()) { const t = setInterval(function () { if (poner()) clearInterval(t); }, 300); setTimeout(function () { clearInterval(t); }, 20000); }
+    setInterval(function () { const c = document.getElementById("ga-chip"); if (!c || !c.isConnected) poner(); }, 3000);
+  }
+
   const arranque = function () { window.__gateP = gateRun(); };
   if (document.body) arranque(); else document.addEventListener("DOMContentLoaded", arranque);
   window.__gate = function () { return window.__gateP || gateRun(); };
@@ -206,7 +242,7 @@ button{cursor:pointer;background:none;border:0;padding:0}
       '<p id="ga-msg" style="margin:18px 0 0;color:#F7911E;font-weight:600;font-size:13.5px;min-height:20px"></p></div>';
     document.body.appendChild(ov);
     const msg = t => { const el = document.getElementById("ga-msg"); if (el) el.textContent = t; };
-    const entrar = u => { try { localStorage.setItem("ga-user", JSON.stringify({ email: u.email, exp: Date.now() + 8 * 3600 * 1000 })); } catch (e) {} window.GA_USER = u; ov.remove(); resolve(u); };
+    const entrar = u => { try { localStorage.setItem("ga-user", JSON.stringify({ email: u.email, name: u.name || "", pic: u.pic || "", exp: Date.now() + 8 * 3600 * 1000 })); } catch (e) {} ov.remove(); listo(u, resolve); };
     const validar = email => {
       const u = match(cfg, email);
       if (!u || u.deny === "dominio") { msg("Solo se permiten cuentas @" + cfg.domain + "."); return; }
@@ -238,10 +274,10 @@ button{cursor:pointer;background:none;border:0;padding:0}
               if (!u || u.deny === "dominio") { msg("Solo se permiten cuentas @" + cfg.domain + ". Ingresaste con " + payload.email + "."); return; }
               if (u.deny === "lista") { msg("La cuenta " + payload.email + " no está autorizada. Pedile acceso a Dirección o Gestión del Talento."); return; }
               if (u.deny === "vista") { msg("Tu cuenta no tiene acceso a esta vista. Tenés acceso a: " + (u.vistas || []).map(v => VIEW_NAMES[v] || v).join(", ") + "."); return; }
-              try { localStorage.setItem("ga-user", JSON.stringify({ email: u.email, exp: Date.now() + 8 * 3600 * 1000 })); } catch (e) {}
-              window.GA_USER = u;
+              u.name = payload.name || ""; u.pic = payload.picture || "";
+              try { localStorage.setItem("ga-user", JSON.stringify({ email: u.email, name: u.name, pic: u.pic, exp: Date.now() + 8 * 3600 * 1000 })); } catch (e) {}
               ov.remove();
-              resolve(u);
+              listo(u, resolve);
             } catch (e) { msg("Error procesando la respuesta de Google."); }
           }
         });
