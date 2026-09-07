@@ -169,7 +169,7 @@ button{cursor:pointer;background:none;border:0;padding:0}
     const u = (cfg.users || []).find(x => (x.email || "").toLowerCase().trim() === email);
     if (!u) return { deny: "lista", email };
     if (u.vistas && u.vistas.length && !u.vistas.includes(VIEW)) return { deny: "vista", email, vistas: u.vistas };
-    return { email, ia: u.ia !== false, vistas: u.vistas || [] };
+    return { email, ia: u.ia !== false, sueldo: u.sueldo === true, vistas: u.vistas || [] };
   }
 
   function gateRun() {
@@ -317,6 +317,7 @@ button{cursor:pointer;background:none;border:0;padding:0}
   }
   const fmtMonto = v => { const s = String(v || ""); if (/[A-Za-z]/.test(s)) return s; const n = Number(s.replace(/[^\d]/g, "")); return v && !isNaN(n) && n > 0 ? "$ " + n.toLocaleString("es-AR") : v || ""; };
 
+  const verSueldo = () => !window.GA_USER || window.GA_USER.sueldo === true;
   const CAMPOS = [
     ["contacto", "Contacto", [["tel", "Teléfono"], ["mail", "Mail"], ["dom", "Domicilio"], ["loc", "Localidad"], ["nacimiento", "Fecha de nacimiento"]]],
     ["laboral", "Datos laborales", [["ingreso", "Fecha de ingreso"], ["antiguedad", "Antigüedad"], ["modalidad", "Modalidad"], ["horario", "Horario laboral"], ["apto", "Apto físico"], ["movilidad", "Movilidad propia"], ["viajar", "Disponibilidad para viajar"]]],
@@ -371,7 +372,7 @@ button{cursor:pointer;background:none;border:0;padding:0}
       if (p.mail) partes.push("mail " + p.mail);
       if (p.nacimiento) partes.push("nacimiento " + p.nacimiento);
       if (p.horario) partes.push("horario " + p.horario);
-      if (p.sueldo) partes.push("salario neto " + p.sueldo);
+      if (p.sueldo && verSueldo()) partes.push("salario neto " + p.sueldo);
       if (p.premios) partes.push("premios " + p.premios);
       if (p.comisiones) partes.push("comisiones " + p.comisiones);
       if (p.prepaga) partes.push("prepaga " + p.prepaga);
@@ -419,7 +420,7 @@ button{cursor:pointer;background:none;border:0;padding:0}
       const q = pregunta.trim(); if (!q || busy) return;
       const hist = [...msgs, { role: "user", content: q }];
       setMsgs(hist); setPregunta(""); setBusy(true);
-      const ctx = AI_SYS + "\n\nCONTEXTO DEL LEGAJO:\n" + legajoContext(st);
+      const ctx = AI_SYS + (verSueldo() ? "" : " IMPORTANTE: el usuario actual NO tiene permiso para ver información salarial; si pregunta por sueldos, salarios o remuneraciones, respondé exactamente: 'No tenés permiso para ver información salarial. Pedísela a Dirección o Gestión del Talento.' y nada más.") + "\n\nCONTEXTO DEL LEGAJO:\n" + legajoContext(st);
       try {
         if (!isStatic && sampleCap === undefined) { setMsgs([...hist, { role: "assistant", content: "El asistente se está inicializando; esperá unos segundos y volvé a preguntar." }]); setBusy(false); return; }
         if (!isStatic && sampleCap) {
@@ -581,7 +582,7 @@ button{cursor:pointer;background:none;border:0;padding:0}
                   CAMPOS.map(([id, titulo, fs]) =>
                     h("section", { key: id },
                       h("h3", null, titulo),
-                      h("dl", null, fs.map(([k, lbl]) => {
+                      h("dl", null, fs.filter(([k]) => k !== "sueldo" || verSueldo()).map(([k, lbl]) => {
                         const extraBtn = k === "tel" && (sel.tel || "").replace(/\D/g, "").length >= 8
                           ? h("a", { className: "minibtn", href: "https://wa.me/" + ((sel.tel || "").replace(/\D/g, "").indexOf("54") === 0 ? (sel.tel || "").replace(/\D/g, "") : "549" + (sel.tel || "").replace(/\D/g, "")), target: "_blank", rel: "noopener noreferrer", title: "WhatsApp", "aria-label": "WhatsApp" }, h(Icon, { name: "MessageCircle", size: 14 }))
                           : k === "mail" && (sel.mail || "").trim()

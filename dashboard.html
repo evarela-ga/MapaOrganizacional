@@ -179,7 +179,7 @@ button{cursor:pointer;background:none;border:0;padding:0}
     const u = (cfg.users || []).find(x => (x.email || "").toLowerCase().trim() === email);
     if (!u) return { deny: "lista", email };
     if (u.vistas && u.vistas.length && !u.vistas.includes(VIEW)) return { deny: "vista", email, vistas: u.vistas };
-    return { email, ia: u.ia !== false, vistas: u.vistas || [] };
+    return { email, ia: u.ia !== false, sueldo: u.sueldo === true, vistas: u.vistas || [] };
   }
 
   function gateRun() {
