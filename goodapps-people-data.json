@@ -1,5 +1,5 @@
 {
- "savedAt": 1788732665557,
+ "savedAt": 1788739654045,
  "meta": {
   "version": "v1.1 — relevamiento 09/2026 cargado",
   "confidencial": true
@@ -307,7 +307,9 @@
    "nombre": "Abba, Agustín",
    "titulo": "",
    "roles": [
-    "dev_fullstack"
+    "dev_fullstack",
+    "dev_frontend",
+    "dev_backend"
    ],
    "nivel": "SENIOR",
    "modalidad": "Relación de Dependencia · Remoto",

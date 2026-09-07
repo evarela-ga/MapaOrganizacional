@@ -226,6 +226,85 @@ button{cursor:pointer;background:none;border:0;padding:0}
 <script>window.react = window.React;</script>
 <script src="https://cdn.jsdelivr.net/npm/lucide-react@0.454.0/dist/umd/lucide-react.min.js"></script>
 <script>
+/* GoodApps — control de acceso con Google (solo sitio estático; los artefactos de claude.ai
+   ya están protegidos por el compartir de claude.ai). Se activa únicamente cuando
+   goodapps-access.json tiene clientId y al menos un usuario autorizado. */
+(function () {
+  const isStatic = !window.claude || !window.claude.use;
+  const VIEW = (function () { const p = (location.pathname.split("/").pop() || "index.html").replace(".html", ""); return p || "index"; })();
+  const VIEW_NAMES = { index: "Organigrama (anónimo)", nominal: "Organigrama nominal", legajo: "Legajo", dashboard: "Dashboard", admin: "Administración" };
+
+  function match(cfg, email) {
+    email = (email || "").toLowerCase().trim();
+    if (!email) return null;
+    if (cfg.domain && !email.endsWith("@" + String(cfg.domain).toLowerCase())) return { deny: "dominio", email };
+    const u = (cfg.users || []).find(x => (x.email || "").toLowerCase().trim() === email);
+    if (!u) return { deny: "lista", email };
+    if (u.vistas && u.vistas.length && !u.vistas.includes(VIEW)) return { deny: "vista", email, vistas: u.vistas };
+    return { email, ia: u.ia !== false, vistas: u.vistas || [] };
+  }
+
+  window.__gate = function () {
+    return new Promise(function (resolve) {
+      if (!isStatic) { resolve(null); return; }
+      (async function () {
+        let cfg = null;
+        try { const r = await fetch("goodapps-access.json", { cache: "no-store" }); if (r.ok) cfg = await r.json(); } catch (e) {}
+        if (!cfg || !cfg.clientId || !/[.]apps[.]googleusercontent[.]com$/.test(cfg.clientId) || !(cfg.users || []).length) { resolve(null); return; }
+        try {
+          const s = JSON.parse(sessionStorage.getItem("ga-user") || "null");
+          if (s && s.exp > Date.now()) { const u = match(cfg, s.email); if (u && !u.deny) { window.GA_USER = u; resolve(u); return; } }
+        } catch (e) {}
+        overlay(cfg, resolve);
+      })();
+    });
+  };
+
+  function overlay(cfg, resolve) {
+    const ov = document.createElement("div");
+    ov.id = "ga-gate";
+    ov.setAttribute("style", "position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#0A2A3B;font-family:'DM Sans','Inter',Arial,sans-serif;color:#fff;text-align:center;padding:24px;");
+    const logo = document.getElementById("logo-dark");
+    ov.innerHTML = '<div style="max-width:420px;width:100%">' +
+      (logo ? '<img src="' + logo.textContent.trim() + '" alt="GoodApps" style="height:36px;margin-bottom:18px">' : "") +
+      '<div style="height:5px;width:120px;margin:0 auto 22px;border-radius:3px;background:linear-gradient(90deg,#F7911E,#65EAA4)"></div>' +
+      '<h1 style="margin:0 0 6px;font-size:22px;font-weight:700">Acceso restringido</h1>' +
+      '<p style="margin:0 0 22px;color:#ADBDC6;font-size:14px;line-height:1.5">' + (VIEW_NAMES[VIEW] || VIEW) + " · solo cuentas corporativas @" + (cfg.domain || "goodapps.com.ar") + "</p>" +
+      '<div id="ga-btn" style="display:flex;justify-content:center"></div>' +
+      '<p id="ga-msg" style="margin:18px 0 0;color:#F7911E;font-weight:600;font-size:13.5px;min-height:20px"></p></div>';
+    document.body.appendChild(ov);
+    const msg = t => { const el = document.getElementById("ga-msg"); if (el) el.textContent = t; };
+    const s = document.createElement("script");
+    s.src = "https://accounts.google.com/gsi/client"; s.async = true;
+    s.onerror = function () { msg("No se pudo cargar Google Sign-In. Revisá la conexión y recargá."); };
+    s.onload = function () {
+      try {
+        google.accounts.id.initialize({
+          client_id: cfg.clientId,
+          callback: function (resp) {
+            try {
+              const payload = JSON.parse(decodeURIComponent(escape(atob(resp.credential.split(".")[1].replace(/-/g, "+").replace(/_/g, "/")))));
+              if (!payload.email || payload.email_verified === false) { msg("No se pudo verificar la cuenta."); return; }
+              const u = match(cfg, payload.email);
+              if (!u || u.deny === "dominio") { msg("Solo se permiten cuentas @" + cfg.domain + ". Ingresaste con " + payload.email + "."); return; }
+              if (u.deny === "lista") { msg("La cuenta " + payload.email + " no está autorizada. Pedile acceso a Dirección o Gestión del Talento."); return; }
+              if (u.deny === "vista") { msg("Tu cuenta no tiene acceso a esta vista. Tenés acceso a: " + (u.vistas || []).map(v => VIEW_NAMES[v] || v).join(", ") + "."); return; }
+              try { sessionStorage.setItem("ga-user", JSON.stringify({ email: u.email, exp: Date.now() + 8 * 3600 * 1000 })); } catch (e) {}
+              window.GA_USER = u;
+              ov.remove();
+              resolve(u);
+            } catch (e) { msg("Error procesando la respuesta de Google."); }
+          }
+        });
+        google.accounts.id.renderButton(document.getElementById("ga-btn"), { theme: "filled_blue", size: "large", text: "signin_with", shape: "pill", width: 280 });
+      } catch (e) { msg("No se pudo iniciar Google Sign-In. Verificá el Client ID en Administración."); }
+    };
+    document.head.appendChild(s);
+  }
+})();
+
+</script>
+<script>
 /* GoodApps — Mapa Organizacional · canvas interactivo. React 18 UMD + lucide-react UMD. */
 (function () {
   const { useState, useReducer, useMemo, useRef, useEffect, useLayoutEffect, useCallback } = React;
@@ -478,13 +557,25 @@ button{cursor:pointer;background:none;border:0;padding:0}
     const isStatic = !window.claude || !window.claude.use;
     useEffect(() => { if (isStatic) { setCaps({ artifact: null, downloads: null }); return; } claude.use("artifact").then(a => setCaps(c => ({ ...c, artifact: a }))); claude.use("downloads").then(d => setCaps(c => ({ ...c, downloads: d }))); }, []);
     // sample puede ser una función: envolver para que React no la ejecute como updater
+    const loadedAtRef = useRef(0);
     useEffect(() => { if (!isStatic) return; (async () => {
       const local = lsRead(); let remote = null;
       try { const r = await fetch(DATA_FILE, { cache: "no-store" }); if (r.ok) remote = await r.json(); } catch (e) {}
       const t = d => (d && d.savedAt) || 0;
       const best = (t(local) >= t(remote) ? (local || remote) : remote);
-      if (best) { dispatch({ type: "loadState", data: best }); say(best === local ? "Datos locales de este navegador cargados" : "Datos cargados desde " + DATA_FILE); }
+      if (best) { dispatch({ type: "loadState", data: best }); loadedAtRef.current = t(best); say(best === local ? "Datos locales de este navegador cargados" : "Datos cargados desde " + DATA_FILE); }
     })(); }, []);
+    // refresco automático: cambios guardados en Administración (misma compu) o publicados en el sitio
+    useEffect(() => { if (!isStatic) return;
+      const aplicar = (d, msj) => { if (!d) return; dispatch({ type: "loadState", data: d }); loadedAtRef.current = d.savedAt || Date.now(); if (msj) say(msj); };
+      const desdeAdmin = raw => { try { const a = JSON.parse(raw); if (!a || !a.roles) return; aplicar({ savedAt: a.savedAt, roles: a.roles, people: MODE === "nominal" ? a.people : [], offsets: {} }, "Datos actualizados desde Administración"); } catch (e) {} };
+      const onStorage = e => { if (e.key === "goodapps-admin" && e.newValue) desdeAdmin(e.newValue); };
+      const refetch = async () => { try { const r = await fetch(DATA_FILE, { cache: "no-store" }); if (!r.ok) return; const d = await r.json(); if ((d.savedAt || 0) > loadedAtRef.current) aplicar(d, "Datos actualizados"); } catch (e) {} };
+      const iv = setInterval(refetch, 90000);
+      const onVis = () => { if (!document.hidden) refetch(); };
+      window.addEventListener("storage", onStorage); document.addEventListener("visibilitychange", onVis);
+      return () => { clearInterval(iv); window.removeEventListener("storage", onStorage); document.removeEventListener("visibilitychange", onVis); };
+    }, []);
     useEffect(() => { if (!isStatic || !st.dirty) return; const t = setTimeout(() => { lsWrite({ savedAt: Date.now(), meta: st.meta, roles: st.roles, people: st.people, offsets: st.offsets }); }, 600); return () => clearTimeout(t); }, [st, isStatic]);
     const say = m => { setToast(m); setTimeout(() => setToast(""), 2600); };
 
@@ -603,7 +694,7 @@ button{cursor:pointer;background:none;border:0;padding:0}
           h("button", { className: "iconbtn", onClick: fit, "aria-label": "Ajustar a pantalla", title: "Ajustar a pantalla" }, h(Icon, { name: "Maximize2", size: 20 })),
           h("button", { className: "iconbtn", onClick: () => { dispatch({ type: "resetLayout" }); dispatch({ type: "expandAll" }); setTimeout(fit, 50); }, "aria-label": "Restablecer disposición", title: "Restablecer disposición" }, h(Icon, { name: "RotateCcw", size: 20 })),
           h("button", { className: "iconbtn", onClick: () => setTheme(t => t === "light" ? "dark" : "light"), "aria-label": "Cambiar tema", title: "Modo claro / oscuro" }, h(Icon, { name: theme === "light" ? "Moon" : "Sun", size: 20 })),
-          h("button", { className: "iconbtn" + (chatOpen ? " on" : ""), onClick: () => setChatOpen(o => !o), "aria-label": "Asistente IA", title: "Preguntale al mapa (IA)", "aria-expanded": chatOpen }, h(Icon, { name: "Sparkles", size: 20 })),
+          (!window.GA_USER || window.GA_USER.ia !== false) && h("button", { className: "iconbtn" + (chatOpen ? " on" : ""), onClick: () => setChatOpen(o => !o), "aria-label": "Asistente IA", title: "Preguntale al mapa (IA)", "aria-expanded": chatOpen }, h(Icon, { name: "Sparkles", size: 20 })),
           h("button", { className: "iconbtn", onClick: () => setInfoOpen(o => !o), "aria-label": "Acerca de este mapa", title: "Acerca de este mapa", "aria-expanded": infoOpen }, h(Icon, { name: "Info", size: 20 }))),
         h("div", { className: "group" },
           h("div", { className: "menu" }, h("button", { className: "iconbtn", onClick: () => setExportOpen(o => !o), "aria-expanded": exportOpen, "aria-label": "Exportar", title: "Exportar" }, h(Icon, { name: "Download", size: 20 })),
@@ -669,7 +760,8 @@ button{cursor:pointer;background:none;border:0;padding:0}
     return shell.replace("<!--STATE-->", stateTag).replace("<!--SHELL-->", shellTag);
   }
 
-  ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+  const __mount = () => ReactDOM.createRoot(document.getElementById("root")).render(h(App));
+  if (window.__gate) window.__gate().then(__mount); else __mount();
 })();
 
 </script>

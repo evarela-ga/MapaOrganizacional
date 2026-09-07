@@ -1,5 +1,5 @@
 {
- "savedAt": 1788738723913,
+ "savedAt": 1788739654014,
  "meta": {
   "mode": "nominal",
   "version": "v1.8 — estructura 2026 validada · fichas en borrador",
@@ -1254,7 +1254,9 @@
    "id": "agustin",
    "nombre": "Abba, Agustín",
    "roles": [
-    "dev_fullstack"
+    "dev_fullstack",
+    "dev_frontend",
+    "dev_backend"
    ],
    "nivel": "SENIOR",
    "modalidad": "Relación de Dependencia · Remoto",
