@@ -2,6 +2,78 @@
  "clientId": "396705980660-6muapfqu706mhgmi12nfv3qqdu3lm79g.apps.googleusercontent.com",
  "domain": "goodapps.com.ar",
  "users": [
-  {"email": "evarela@goodapps.com.ar", "vistas": ["index", "nominal", "legajo", "dashboard", "admin"], "ia": true, "sueldo": true, "descargas": true}
+  {
+   "email": "evarela@goodapps.com.ar",
+   "vistas": [
+    "index",
+    "nominal",
+    "legajo",
+    "dashboard",
+    "admin"
+   ],
+   "ia": true,
+   "sueldo": true,
+   "descargas": true
+  },
+  {
+   "email": "ebria@goodapps.com.ar",
+   "vistas": [
+    "index",
+    "nominal",
+    "legajo",
+    "dashboard"
+   ],
+   "ia": true,
+   "sueldo": false,
+   "descargas": false
+  },
+  {
+   "email": "lgarrido@goodapps.com.ar",
+   "vistas": [
+    "index",
+    "nominal",
+    "legajo",
+    "dashboard"
+   ],
+   "ia": true,
+   "sueldo": false,
+   "descargas": false
+  },
+  {
+   "email": "administracion@goodapps.com.ar",
+   "vistas": [
+    "index",
+    "nominal",
+    "legajo",
+    "dashboard"
+   ],
+   "ia": true,
+   "sueldo": false,
+   "descargas": false
+  },
+  {
+   "email": "ealloco@goodapps.com.ar",
+   "vistas": [
+    "index",
+    "nominal",
+    "legajo",
+    "dashboard"
+   ],
+   "ia": true,
+   "sueldo": false,
+   "descargas": false
+  },
+  {
+   "email": "jracca@goodapps.com.ar",
+   "vistas": [
+    "index",
+    "nominal",
+    "legajo",
+    "dashboard"
+   ],
+   "ia": true,
+   "sueldo": false,
+   "descargas": false
+  }
  ]
 }
